@@ -1,0 +1,1 @@
+export { default as SwitchCircleIcon } from './SwitchCircleIcon';
