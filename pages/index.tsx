@@ -1,17 +1,14 @@
-import { ThemeProvider } from 'styled-components';
-import theme from '../utils/theme';
+import { useContext } from 'react';
+import { withTheme } from 'styled-components';
+import Context from '../context';
 import {
   Wrapper,
-  Header,
+  App
 } from '../components';
-import header from '../lib/header';
 
-const Home: React.ReactNode = (): React.ReactNode => (
-  <ThemeProvider theme={theme('light')}>
-    <Wrapper>
-      <Header {...header} />
-    </Wrapper>
-  </ThemeProvider>
+const Home: React.ReactNode = (props): React.ReactNode => (
+  <Wrapper>
+    <App {...props} />
+  </Wrapper>
 );
-
-export default Home;
+export default withTheme(Home);
