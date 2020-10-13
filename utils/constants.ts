@@ -1,0 +1,9 @@
+export const HEADER_ICON = 'header-icon';
+export const DARK = 'dark';
+export const LIGHT = 'light';
+export const TOGGLE_ON = 'toggle_on';
+export const TOGGLE_OFF = 'toggle_off';
+export const HEADER = 'header';
+export const TOGGLE_STATUS = 'toggle_status';
+export const LINK = 'link';
+export const IMAGE = 'image';
