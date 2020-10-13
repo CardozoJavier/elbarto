@@ -10,6 +10,9 @@ export const Container = styled.header`
 `;
 
 export const ItemContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   overflow: hidden;
   padding: 10px;
   .header-icon img {
@@ -23,6 +26,7 @@ export const ItemContainer = styled.div`
 export const Item = styled.a`
   padding: 10px 20px;
   text-decoration: none;
+  color: ${({ theme }) => theme.text.primary};
   &:hover, &:link, &:visited {
     color: red;
     cursor: pointer;

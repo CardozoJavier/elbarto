@@ -1,5 +1,3 @@
-import Switch from '../components/Switch';
-
 const header = {
   left: [
     {
@@ -7,7 +5,6 @@ const header = {
       type: 'image',
       href: '/',
       src: 'elbarto.png',
-      className: 'header-icon'
     },
   ],
   center: [
@@ -43,12 +40,6 @@ const header = {
       type: 'link',
       href: '/contact'
     },
-    {
-      text: '',
-      type: 'component',
-      href: '',
-      component: Switch
-    }
   ]
 };
 

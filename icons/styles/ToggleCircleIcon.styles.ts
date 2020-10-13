@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-export const Container: React.ReactNode = styled.div`
+export const Container = styled.div`
   transition: all .3s;
   position: relative;
-  right: 2px;
-  top: 1px;
+  right: 3px;
+  height: inherit;
 
-  &.switch {
+  &.toggle_status {
     &__on {
       transform: translateX(19px);
     }
