@@ -1,3 +1,12 @@
+const shared = {
+  gray: {
+    g0: '#FBFBFD',
+    g1: '#EFF0F5',
+    g07: '#C5C3C3',
+  },
+  purple90: '#5e5e90',
+};
+
 const dark = {
   background: {
     main: '#333'
@@ -7,7 +16,8 @@ const dark = {
   },
   hightlight: {
     error: '#ff0000',
-  }
+  },
+  ...shared,
 };
 
 const light = {
@@ -19,7 +29,8 @@ const light = {
   },
   hightlight: {
     error: '#ff0000'
-  }
+  },
+  ...shared,
 };
 
 export default {
