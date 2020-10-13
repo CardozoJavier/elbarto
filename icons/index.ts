@@ -1,1 +1,1 @@
-export { default as SwitchCircleIcon } from './SwitchCircleIcon';
+export { default as ToggleCircleIcon } from './ToggleCircleIcon';
