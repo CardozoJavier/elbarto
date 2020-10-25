@@ -9,12 +9,19 @@ export const LINK = 'link';
 export const IMAGE = 'image';
 export const BUTTON = 'button';
 export const CHECKOUT_PORTFOLIO = 'Check out portfolio';
+export const PROFILE_IMAGE = 'profile image';
+export const ARROW_ICON = 'arrow-icon';
+
 export const ONLY_PREV = 'only-prev';
 export const ONLY_NEXT = 'only-next';
-export const PROFILE_IMAGE = 'profile image';
+
+export const LEFT_TO_RIGHT_ANIMATION = 'left-to-right-animation';
+export const RIGHT_TO_LEFT_ANIMATION = 'right-to-left-animation';
+export const DEFAULT_ANIMATION = 'default-animation';
+
 export const PREV_ARROW = 'prev-arrow';
 export const NEXT_ARROW = 'next-arrow';
-export const ARROW_ICON = 'arrow-icon';
+
 export const NEXT_ACTION = 'next-action';
 export const PREV_ACTION = 'prev-action';
 
