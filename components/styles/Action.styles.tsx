@@ -5,7 +5,6 @@ export const ActionContainer = styled.div`
 `;
 
 export const ActionLink = styled.a`
-  font-size: 14px;
   display: block;
   margin-left: auto;
   width: fit-content;
@@ -15,10 +14,8 @@ export const ActionLink = styled.a`
   padding: 20px;
   border-radius: 4px;
   color: ${({ theme }) => theme.white.w08};
-  border: 1px solid ${({ theme }) => theme.orange.o100};
   &:hover, &:link, &:visited {
     cursor: pointer;
-    color: ${({ theme }) => theme.white.w100};
-    background-color: ${({ theme }) => theme.orange.o100};
+    color: ${({ theme }) => theme.orange.o100};
   }
 `;
