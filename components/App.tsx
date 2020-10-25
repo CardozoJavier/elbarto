@@ -1,5 +1,6 @@
 import {
-  Header
+  Header,
+  Main
 } from '.';
 import { HeaderProps } from './Header';
 
@@ -16,6 +17,7 @@ const App: AppInterface = ({ header }: AppProps): JSX.Element => {
   return (
     <>
       <Header {...header} />
+      <Main />
     </>
   );
 };
