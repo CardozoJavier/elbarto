@@ -1,22 +1,30 @@
 import { useEffect, useContext } from 'react';
 import { withTheme } from 'styled-components';
-import {
-  App,
-  Main
-} from '../components';
-import { HOME } from '../utils/constants';
+import { App, Main } from '../components';
+import { HOME, DEFAULT_ANIMATION, ABOUT_ME, HREF_ABOUT } from '../utils/constants';
+import classes from '../utils/classes';
 import Context from '../context';
 
 const Home: React.ReactNode = (props): React.ReactNode => {
-  const { dispatch } = useContext(Context);
+  const { dispatch, navigation } = useContext(Context);
+  const { from, className } = navigation || {};
 
   useEffect(() => {
-    dispatch({ type: HOME });
+    const payload = {
+      className: classes.get(from) || DEFAULT_ANIMATION,
+      prev: null,
+      from: HOME,
+      next: {
+        text: ABOUT_ME,
+        href: HREF_ABOUT,
+      }
+    };
+    dispatch({ type: HOME, payload });
   }, []);
 
   return (
     <App {...props}>
-      <Main />
+      <Main className={className} />
     </App>
   );
 }

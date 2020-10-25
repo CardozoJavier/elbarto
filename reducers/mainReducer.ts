@@ -3,6 +3,7 @@ import { Action } from './index';
 
 export const initialState = {
   title: 'Front-end Developer.',
+  className: '',
 };
 
 const mainReducer = (state: MainProps = initialState, action: Action): MainProps => {
