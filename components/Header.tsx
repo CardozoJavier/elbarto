@@ -6,8 +6,8 @@ import {
   ItemContainer,
   Item,
 } from './styles/Header.styles';
-import Toggle from './Toggle';
 import {
+  CONTACT_LINK,
   HEADER_ICON,
   LINK,
   IMAGE,
@@ -73,7 +73,7 @@ const Header: React.ReactNode = (): JSX.Element => {
       <ItemContainer>
         {Array.isArray(center) && center.map(item => renderItem(item))}
       </ItemContainer>
-      <ItemContainer>
+      <ItemContainer className={CONTACT_LINK}>
         {Array.isArray(right) && right.map(item => renderItem(item))}
       </ItemContainer>
     </Container>

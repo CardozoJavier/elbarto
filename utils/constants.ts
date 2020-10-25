@@ -8,6 +8,7 @@ export const TOGGLE_ON = 'toggle_on';
 export const TOGGLE_OFF = 'toggle_off';
 export const ARROW_ICON = 'arrow-icon';
 export const HEADER_ICON = 'header-icon';
+export const CONTACT_LINK = 'contact-link';
 export const PROFILE_IMAGE = 'profile image';
 export const TOGGLE_STATUS = 'toggle_status';
 export const CHECKOUT_PORTFOLIO = 'Check out portfolio';
