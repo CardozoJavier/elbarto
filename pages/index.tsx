@@ -6,7 +6,8 @@ import classes from '../utils/classes';
 import Context from '../context';
 
 const Home: React.ReactNode = (props): React.ReactNode => {
-  const { dispatch, navigation } = useContext(Context);
+  const { dispatch, navigation, main } = useContext(Context);
+  const { title } = main;
   const { from, className } = navigation || {};
 
   useEffect(() => {
@@ -24,7 +25,7 @@ const Home: React.ReactNode = (props): React.ReactNode => {
 
   return (
     <App {...props}>
-      <Main className={className} />
+      <Main title={title} className={className} />
     </App>
   );
 }
