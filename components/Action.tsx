@@ -5,12 +5,26 @@ import {
 } from './styles/Action.styles';
 import {
   LINK,
-  BUTTON
+  BUTTON,
+  ARROW_ICON,
 } from '../utils/constants';
+import { ArrowIcon } from './UI';
 
-const renderLink = (text: string, href: string): React.ReactElement => (
+const getIcon = (icon) => {
+  switch (icon) {
+    case ARROW_ICON:
+      return <ArrowIcon />;
+    default:
+      return;
+  }
+};
+
+const renderLink = (text: string, href: string, icon: string): React.ReactElement => (
   <Link href={href}>
-    <ActionLink>{text}</ActionLink>
+    <ActionLink>
+      {text}
+      {icon && getIcon(icon)}
+    </ActionLink>
   </Link>
 );
 
@@ -18,10 +32,10 @@ const renderButton = (text: string, onClick: () => void) => (
   <button onClick={onClick}>{text}</button>
 );
 
-const renderAction = (type: string, text: string, href: string, onClick: () => void): React.ReactElement => {
+const renderAction = (type: string, text: string, href: string, icon: string, onClick: () => void): React.ReactElement => {
   switch (type) {
     case LINK:
-      return renderLink(text, href);
+      return renderLink(text, href, icon);
     case BUTTON:
       return renderButton(text, onClick);
     default:
@@ -33,13 +47,14 @@ type Props = {
   type: string;
   text: string;
   href?: string;
+  icon?: string;
   className: string;
   onClick?: () => void;
 };
 
-const Action = ({ type, text, href, className, onClick }: Props): React.ReactElement => (
+const Action = ({ type, text, href, className, icon, onClick }: Props): React.ReactElement => (
   <ActionContainer className={className}>
-    {renderAction(type, text, href, onClick)}
+    {renderAction(type, text, href, icon, onClick)}
   </ActionContainer>
 );
 

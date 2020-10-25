@@ -6,6 +6,9 @@ import {
   LINK,
   ONLY_PREV,
   ONLY_NEXT,
+  ARROW_ICON,
+  PREV_ACTION,
+  NEXT_ACTION,
 } from '../utils/constants';
 
 type Link = {
@@ -20,8 +23,24 @@ export interface NavigationProps {
 
 const Navigation = ({prev, next }: NavigationProps) => (
   <Container>
-    {prev && <Action text={prev.text} href={prev.href} type={LINK} className={next ? '' : ONLY_PREV} />}
-    {next && <Action text={next.text} href={next.href} type={LINK} className={prev ? '' : ONLY_NEXT} />}
+    {prev &&
+      <Action
+        text={prev.text}
+        icon={ARROW_ICON}
+        href={prev.href}
+        type={LINK}
+        className={next ? PREV_ACTION : ONLY_PREV}
+      />
+    }
+    {next &&
+      <Action
+        text={next.text}
+        icon={ARROW_ICON}
+        href={next.href}
+        type={LINK}
+        className={prev ? NEXT_ACTION : ONLY_NEXT}
+      />
+    }
   </Container>
 );
 
