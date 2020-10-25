@@ -73,7 +73,6 @@ const Header: React.ReactNode = (): JSX.Element => {
       </ItemContainer>
       <ItemContainer>
         {Array.isArray(right) && right.map(item => renderItem(item))}
-        <Toggle />
       </ItemContainer>
     </Container>
   );
