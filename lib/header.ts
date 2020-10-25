@@ -9,9 +9,9 @@ const header = {
   ],
   center: [
     {
-      text: 'code shop',
+      text: 'about',
       type: 'link',
-      href: '/code-shop'
+      href: '/about'
     },
     {
       text: 'portfolio',
@@ -19,26 +19,18 @@ const header = {
       href: '/portfolio'
     },
     {
-      text: 'about',
-      type: 'link',
-      href: '/about'
-    },
-    {
       text: 'resume',
       type: 'link',
       href: '/resume'
-    },
-    {
-      text: 'blog',
-      type: 'link',
-      href: '/blog'
     },
   ],
   right: [
     {
       text: 'contact',
       type: 'link',
-      href: '/contact'
+      href: 'mailto:cardozojavier.c@gmail.com',
+      passHref: true,
+      target: '_blank',
     },
   ]
 };

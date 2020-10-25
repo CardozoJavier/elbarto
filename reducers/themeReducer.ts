@@ -8,7 +8,6 @@ import {
 export const initialState = LIGHT;
 
 const themeReducer = (state, action) => {
-  console.log({ state, action })
   switch (action.type) {
     case TOGGLE_ON:
       return DARK

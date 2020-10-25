@@ -1,36 +1,43 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
-  padding: 20px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  border: 1px solid red;
 `;
 
 export const ItemContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  overflow: hidden;
   padding: 10px;
   .header-icon img {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 75px;
+    max-height: 75px;
   }
 
-  border: 1px solid blue;
+  @media (max-width: 856px) {
+    max-width: 305px;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
+
+  &.contact-link {
+    a {
+      color: ${({ theme }) => theme.orange.o100};
+    }
+  }
 `;
 
 export const Item = styled.a`
+  font-size: 14px;
   padding: 10px 20px;
   text-decoration: none;
   color: ${({ theme }) => theme.text.primary};
+  transition: all .3s;
+  text-transform: uppercase;
   &:hover, &:link, &:visited {
-    color: red;
+    color: ${({ theme }) => theme.orange.o100};
     cursor: pointer;
   }
-
-  border: 1px solid cyan;
 `;
