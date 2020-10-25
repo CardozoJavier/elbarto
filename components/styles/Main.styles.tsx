@@ -11,10 +11,63 @@ export const Container = styled.div`
 export const MainStyled = styled.main``;
 
 export const Section = styled.section`
-  height: calc(90vh - 338px);
+  height: calc(90vh - 242px);
   display: flex;
   justify-content: space-between;
   margin-top: 5vh;
+
+  
+  &.right-to-left-animation {
+    animation: turn-left .5s;
+    @keyframes turn-left {
+      from {
+        transform: translateX(2vw);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
+
+  &.left-to-right-animation {
+    animation: turn-right .5s;
+    @keyframes turn-right {
+      from {
+        transform: translateX(-2vw);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
+
+  &.default-animation {
+    opacity: 0;
+    animation: turn-default .5s;
+    animation-delay: .8s;
+
+    // Preserve styles after animation
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;  
+
+    @keyframes turn-default {
+      from {
+        transform: translateY(-2vw);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
 `;
 
 export const TitleContainer = styled.div`
