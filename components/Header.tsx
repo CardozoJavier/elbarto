@@ -18,9 +18,9 @@ interface Item {
   text: string
   href: string
   type: string
-  src?: string
-  passHref?: boolean
-  target?: string
+  src: string
+  passHref: boolean
+  target: string
 }
 
 export interface HeaderProps {

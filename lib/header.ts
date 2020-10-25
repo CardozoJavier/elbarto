@@ -5,23 +5,34 @@ const header = {
       type: 'image',
       href: '/',
       src: 'elbarto.png',
+      passHref: false,
+      target: '',
     },
   ],
   center: [
     {
       text: 'about',
       type: 'link',
-      href: '/about'
+      href: '/about',
+      src: '',
+      passHref: false,
+      target: '',
     },
     {
       text: 'portfolio',
       type: 'link',
-      href: '/portfolio'
+      href: '/portfolio',
+      src: '',
+      passHref: false,
+      target: '',
     },
     {
       text: 'resume',
       type: 'link',
-      href: '/resume'
+      href: '/resume',
+      src: '',
+      passHref: false,
+      target: '',
     },
   ],
   right: [
@@ -31,6 +42,7 @@ const header = {
       href: 'mailto:cardozojavier.c@gmail.com',
       passHref: true,
       target: '_blank',
+      src: '',
     },
   ]
 };

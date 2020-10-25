@@ -3,9 +3,9 @@ import media from '../../utils/media'
 import { Item } from './Header.styles';
 
 export const Container = styled.div`
-  ${media.extraLarge`
+  @media (max-width: 3840px) {
     padding: 5vh 5vw;
-  `};
+  }
 `;
 
 export const MainStyled = styled.main``;
