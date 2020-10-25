@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import {
   Header,
+  Wrapper,
   Navigation,
 } from '.';
 import Context from '../context';
@@ -17,11 +18,11 @@ const App: AppInterface = ({ children }: AppProps): JSX.Element => {
   const { header, navigation } = useContext(Context);
 
   return (
-    <>
+    <Wrapper>
       <Header {...header} />
       {children}
       <Navigation {...navigation} />
-    </>
+    </Wrapper>
   );
 }
 
