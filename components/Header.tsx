@@ -19,6 +19,8 @@ interface Item {
   href: string
   type: string
   src?: string
+  passHref?: boolean
+  target?: string
 }
 
 export interface HeaderProps {
@@ -32,11 +34,11 @@ interface RenderItem {
 }
 
 const renderItem: RenderItem = (item: Item): JSX.Element => {
-  const { type } = item || {};
+  const { type, passHref } = item || {};
   if (type === LINK) {
     return (
-      <Link href={item.href} key={item.text}>
-        <Item>
+      <Link href={item.href} key={item.text} passHref={passHref}>
+        <Item target={item.target}>
           {item.text}
         </Item>
       </Link>
