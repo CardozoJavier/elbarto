@@ -2,14 +2,14 @@ import { NavigationProps } from '../components/Navigation';
 import {
   HOME,
   ABOUT_ME,
-  PORTFOLIO,
   HREF_ABOUT,
-  HREF_HOME,
-  HREF_PORTFOLIO,
+  DEFAULT_ANIMATION,
 } from '../utils/constants';
 import { Action } from './index';
 
 export const initialState = {
+  className: DEFAULT_ANIMATION,
+  from: null,
   prev: null,
   next: {
     text: ABOUT_ME,
@@ -17,30 +17,21 @@ export const initialState = {
   },
 };
 
-const headerReducer = (state: NavigationProps = initialState, action: Action): NavigationProps => {
+const navigationReducer = (state: NavigationProps = initialState, action: Action): NavigationProps => {
   switch (action.type) {
     case HOME:
       return {
-        prev: null,
-        next: {
-          text: ABOUT_ME,
-          href: HREF_ABOUT,
-        }
+        ...state,
+        ...action.payload,
       };
     case ABOUT_ME: 
-     return {
-       prev: {
-         text: HOME,
-         href: HREF_HOME,
-       },
-       next: {
-         text: PORTFOLIO,
-         href: HREF_PORTFOLIO,
-       }
-     };
+      return {
+        ...state,
+        ...action.payload,
+    };
     default:
       return { ...state };
   }
 };
 
-export default headerReducer;
+export default navigationReducer;
