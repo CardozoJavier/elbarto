@@ -17,6 +17,8 @@ type Link = {
 };
 
 export interface NavigationProps {
+  className: string
+  from: string
   prev: Link
   next: Link
 };

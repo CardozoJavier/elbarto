@@ -9,17 +9,17 @@ import { useContext } from 'react';
 import Context from '../context';
 
 export interface MainProps {
-  title: string
+  className: string
 }
 
-const Main = () => {
+const Main = ({ className }: MainProps) => {
   const { main } = useContext(Context);
   const { title } = main || {};
 
   return (
     <Container>
       <MainStyled>
-        <Section>
+        <Section className={className}>
           <TitleContainer>
             <Title>{title}</Title>
           </TitleContainer>
