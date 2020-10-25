@@ -1,25 +1,28 @@
+import { useContext } from 'react';
 import {
   Header,
-  Main
+  Navigation,
 } from '.';
-import { HeaderProps } from './Header';
+import Context from '../context';
 
 interface AppProps {
-  header: HeaderProps
+  children: React.ReactElement;
 }
 
 interface AppInterface {
   (props: AppProps): JSX.Element
 }
 
-const App: AppInterface = ({ header }: AppProps): JSX.Element => {
+const App: AppInterface = ({ children }: AppProps): JSX.Element => {
+  const { header, navigation } = useContext(Context);
 
   return (
     <>
       <Header {...header} />
-      <Main />
+      {children}
+      <Navigation {...navigation} />
     </>
   );
-};
+}
 
 export default App;
