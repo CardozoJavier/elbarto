@@ -27,6 +27,10 @@ export const Container = styled.div`
     a {
       flex-direction: row-reverse;
     }
+    svg {
+      transition: transform .3s;
+      transform: translateX(0);
+    }
     &:hover {
       svg {
         transition: transform .3s;
@@ -40,7 +44,8 @@ export const Container = styled.div`
 
   .only-next, .next-action {
     svg {
-      transform: rotate(180deg);
+      transition: transform .3s;
+      transform: rotate(180deg) translateX(0);
     }
     &:hover {
       svg {
