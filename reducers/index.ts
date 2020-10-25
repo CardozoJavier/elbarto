@@ -27,11 +27,12 @@ export interface State {
   toggle: ToggleProps
   theme: string
   about: AboutProps
-}
+};
 
 export interface Action {
   type: string
-}
+  payload?: NavigationProps
+};
 
 export const combineReducer = (state: State, action: Action): State => ({
   toggle: toggleReducer(state.toggle, action),

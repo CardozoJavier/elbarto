@@ -1,6 +1,7 @@
 const about = {
   title: 'My passion and focus is front-end development',
-  description: "Let's be honest and cut through the marketing fluff. You need a website that looks amazing and actually works. Bottom line, that's what I do. And if you want to learn more about working with me, pick up the phone and give me a call (or email).",
+  description: `I am a front-end developer with 2 years of experience building and testing web applications using the MERN stack.<br>
+  I am a passionate about technology and programming things. Connect the human with the machine through the graphic interfaces is a concept that blew my mind.`,
 };
 
 export default about;
