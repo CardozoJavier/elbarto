@@ -1,3 +1,4 @@
+import parse from 'html-react-parser';
 import {
   AboutSection as Section,
   DescriptionContainer,
@@ -9,17 +10,18 @@ import { PROFILE_IMAGE } from '../utils/constants';
 export interface AboutProps {
   title: string;
   description: string;
+  className: string;
 }
 
-const About = ({ title, description }: AboutProps): React.ReactElement => (
-  <Section>
+const About = ({ title, description, className }: AboutProps): React.ReactElement => (
+  <Section className={className}>
     <img src="/images/profile.jpg" alt={PROFILE_IMAGE} />
     <DescriptionContainer>
       <Header>
         {title}
       </Header>
       <Description>
-        {description}
+        {parse(description)}
       </Description>
     </DescriptionContainer>
   </Section>
