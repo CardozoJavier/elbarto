@@ -6,8 +6,8 @@ import {
   ItemContainer,
   Item,
 } from './styles/Header.styles';
-import Toggle from './Toggle';
 import {
+  CONTACT_LINK,
   HEADER_ICON,
   LINK,
   IMAGE,
@@ -19,6 +19,8 @@ interface Item {
   href: string
   type: string
   src?: string
+  passHref?: boolean
+  target?: string
 }
 
 export interface HeaderProps {
@@ -32,11 +34,11 @@ interface RenderItem {
 }
 
 const renderItem: RenderItem = (item: Item): JSX.Element => {
-  const { type } = item || {};
+  const { type, passHref } = item || {};
   if (type === LINK) {
     return (
-      <Link href={item.href} key={item.text}>
-        <Item>
+      <Link href={item.href} key={item.text} passHref={passHref}>
+        <Item target={item.target}>
           {item.text}
         </Item>
       </Link>
@@ -71,7 +73,7 @@ const Header: React.ReactNode = (): JSX.Element => {
       <ItemContainer>
         {Array.isArray(center) && center.map(item => renderItem(item))}
       </ItemContainer>
-      <ItemContainer>
+      <ItemContainer className={CONTACT_LINK}>
         {Array.isArray(right) && right.map(item => renderItem(item))}
       </ItemContainer>
     </Container>

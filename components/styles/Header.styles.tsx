@@ -21,6 +21,12 @@ export const ItemContainer = styled.div`
     flex-wrap: wrap-reverse;
     justify-content: center;
   }
+
+  &.contact-link {
+    a {
+      color: ${({ theme }) => theme.orange.o100};
+    }
+  }
 `;
 
 export const Item = styled.a`
