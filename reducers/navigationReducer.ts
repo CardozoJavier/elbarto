@@ -4,6 +4,8 @@ import {
   ABOUT_ME,
   HREF_ABOUT,
   DEFAULT_ANIMATION,
+  PORTFOLIO,
+  RESUME,
 } from '../utils/constants';
 import { Action } from './index';
 
@@ -24,7 +26,17 @@ const navigationReducer = (state: NavigationProps = initialState, action: Action
         ...state,
         ...action.payload,
       };
-    case ABOUT_ME: 
+    case ABOUT_ME:
+      return {
+        ...state,
+        ...action.payload,
+    };
+    case PORTFOLIO:
+      return {
+        ...state,
+        ...action.payload,
+    };
+    case RESUME:
       return {
         ...state,
         ...action.payload,
