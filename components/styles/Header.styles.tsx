@@ -1,36 +1,39 @@
 import styled from 'styled-components';
+import media from '../../utils/media';
 
 export const Container = styled.header`
   padding: 20px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  border: 1px solid red;
 `;
 
 export const ItemContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  overflow: hidden;
   padding: 10px;
   .header-icon img {
     max-width: 100px;
     max-height: 100px;
   }
 
-  border: 1px solid blue;
+  @media (max-width: 856px) {
+    max-width: 305px;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
 `;
 
 export const Item = styled.a`
+  font-size: 14px;
   padding: 10px 20px;
   text-decoration: none;
   color: ${({ theme }) => theme.text.primary};
+  transition: all .3s;
+  text-transform: uppercase;
   &:hover, &:link, &:visited {
-    color: red;
+    color: ${({ theme }) => theme.orange.o100};
     cursor: pointer;
   }
-
-  border: 1px solid cyan;
 `;

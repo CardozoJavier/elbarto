@@ -7,3 +7,5 @@ export const HEADER = 'header';
 export const TOGGLE_STATUS = 'toggle_status';
 export const LINK = 'link';
 export const IMAGE = 'image';
+export const FIRST_SECTION = 'first-section';
+export const SECOND_SECTION = 'second-section';

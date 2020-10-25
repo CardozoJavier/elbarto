@@ -1,4 +1,12 @@
 const shared = {
+  white: {
+    w100: '#fff',
+    w08: 'rgba(255, 255, 255, 0.8)',
+  },
+  orange: {
+    o100: '#ce8832',
+    o50: 'rgb(206 136 50 / 0.5);',
+  },
   gray: {
     g0: '#FBFBFD',
     g1: '#EFF0F5',

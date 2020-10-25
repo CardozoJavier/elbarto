@@ -1,3 +1,6 @@
 import palette from './palette';
 
-export default (theme: string): {} => (palette[theme]);
+const getTheme = (theme: string): {} => (palette[theme]);
+
+export default getTheme;
+
