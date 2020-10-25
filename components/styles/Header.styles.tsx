@@ -1,8 +1,6 @@
 import styled from 'styled-components';
-import media from '../../utils/media';
 
 export const Container = styled.header`
-  padding: 20px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,8 +12,8 @@ export const ItemContainer = styled.div`
   justify-content: space-between;
   padding: 10px;
   .header-icon img {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 75px;
+    max-height: 75px;
   }
 
   @media (max-width: 856px) {

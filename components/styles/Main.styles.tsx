@@ -11,17 +11,62 @@ export const Container = styled.div`
 export const MainStyled = styled.main``;
 
 export const Section = styled.section`
-  &.first-section {
-    height: calc(95vh - 198px);
-  } 
-  &.second-section {
-    padding: 5vh 5vw;
-    display: flex;
-    img {
-      border-radius: 50%;
-      max-width: 35vw;
-      max-height: 35vw;
-    } 
+  height: calc(90vh - 242px);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5vh;
+
+  
+  &.right-to-left-animation {
+    animation: turn-left .5s;
+    @keyframes turn-left {
+      from {
+        transform: translateX(2vw);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
+
+  &.left-to-right-animation {
+    animation: turn-right .5s;
+    @keyframes turn-right {
+      from {
+        transform: translateX(-2vw);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
+
+  &.default-animation {
+    opacity: 0;
+    animation: turn-default .5s;
+    animation-delay: .8s;
+
+    // Preserve styles after animation
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;  
+
+    @keyframes turn-default {
+      from {
+        transform: translateY(-2vw);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
   }
 `;
 
@@ -31,7 +76,7 @@ export const TitleContainer = styled.div`
 `;
 
 export  const Title = styled.h1`
-  font-size: 8vw;
+  font-size: 7vw;
   font-family: 'Roboto Slab', serif;
   color: ${({ theme }) => theme.white.w08};
   margin-top: 0;
@@ -39,7 +84,6 @@ export  const Title = styled.h1`
 
 export  const Action = styled(Item)`
   color: ${({ theme }) => theme.white.w08};
-  background-color: ${({ theme }) => theme.orange.o50};
   padding: 20px;
   border-radius: 4px;
   border: 1px solid ${({ theme }) => theme.orange.o100};
@@ -47,19 +91,4 @@ export  const Action = styled(Item)`
     color: ${({ theme }) => theme.white.w100};
     background-color: ${({ theme }) => theme.orange.o100};
   }
-`;
-
-export const DescriptionContainer = styled.div`
-  padding: 5vh 5vw;
-`;
-
-export const TitleDescription = styled.h2`
-  font-size: 3vw;
-  color: ${({ theme }) => theme.white.w08};
-  max-width: 35vw;
-`;
-
-export const Description = styled.p`
-  color: ${({ theme }) => theme.white.w08};
-  letter-spacing: 1px;
 `;

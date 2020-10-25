@@ -8,12 +8,12 @@ const sizes = {
   extraSmall: 320,
 };
 const media = Object.keys(sizes).reduce((acc, label) => {
-  acc[label] = (...args) => css`
+  acc[label] = (...args: string[]) => css`
       @media (max-width: ${sizes[label]}px) {
          ${css(...args)};
       }
    `;
   return acc;
 }, {});
-console.log(media, '< < < < media')
+
 export default media;
