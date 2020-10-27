@@ -27,6 +27,14 @@ const header = {
       target: '',
     },
     {
+      text: 'linkedin',
+      type: 'link',
+      href: 'https://www.linkedin.com/in/javier-andres-cardozo/',
+      passHref: true,
+      target: '_blank',
+      src: '',
+    },
+    {
       text: 'resume',
       type: 'link',
       href: '/resume',
