@@ -24,7 +24,13 @@ export const ItemContainer = styled.div`
 
   &.contact-link {
     a {
-      color: ${({ theme }) => theme.orange.o100};
+      color: ${({ theme }) => theme.white.w08};
+      background-color: ${({ theme }) => theme.orange.o50};
+      border-radius: 3px;
+      &:hover {
+        background-color: ${({ theme }) => theme.orange.o100};
+        color: ${({ theme }) => theme.white.w100};
+      }
     }
   }
 `;
@@ -36,7 +42,10 @@ export const Item = styled.a`
   color: ${({ theme }) => theme.text.primary};
   transition: all .3s;
   text-transform: uppercase;
-  &:hover, &:link, &:visited {
+  &:link, &:visited {
+    color: ${({ theme }) => theme.text.primary};
+  }
+  &:hover {
     color: ${({ theme }) => theme.orange.o100};
     cursor: pointer;
   }

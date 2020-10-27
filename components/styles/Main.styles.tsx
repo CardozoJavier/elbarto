@@ -11,11 +11,8 @@ export const Container = styled.div`
 export const MainStyled = styled.main``;
 
 export const Section = styled.section`
-  height: calc(90vh - 242px);
   display: flex;
   justify-content: space-between;
-  margin-top: 5vh;
-
   
   &.right-to-left-animation {
     animation: turn-left .5s;
@@ -76,10 +73,10 @@ export const TitleContainer = styled.div`
 `;
 
 export  const Title = styled.h1`
-  font-size: 7vw;
+  font-size: 10vw;
   font-family: 'Roboto Slab', serif;
   color: ${({ theme }) => theme.white.w08};
-  margin-top: 0;
+  margin: 0;
 `;
 
 export  const Action = styled(Item)`
