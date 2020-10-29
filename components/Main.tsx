@@ -1,4 +1,6 @@
 import {
+  Video,
+  MainImage,
   Title,
   Section,
   Container,
@@ -18,6 +20,12 @@ const Main = ({ title, className }: MainProps) => (
         <TitleContainer>
           <Title>{title}</Title>
         </TitleContainer>
+        <div>
+          <MainImage style={{ width: '100%' }} src="/images/laptop.png" alt="laptop-image" />
+          <Video width="73%" height="170" autoPlay muted loop>
+            <source src="/images/video.mov" />
+          </Video>
+        </div>
       </Section>
     </MainStyled>
   </Container>

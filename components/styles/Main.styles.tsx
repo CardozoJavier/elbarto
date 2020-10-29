@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import media from '../../utils/media'
 import { Item } from './Header.styles';
+import { Image } from '../UI/styles/UI.styles';
 
 export const Container = styled.div`
   @media (max-width: 3840px) {
@@ -45,7 +46,7 @@ export const Section = styled.section`
   &.default-animation {
     opacity: 0;
     animation: turn-default .5s;
-    animation-delay: .8s;
+    animation-delay: 1.5s;
 
     // Preserve styles after animation
     -webkit-animation-fill-mode: forwards;
@@ -88,4 +89,16 @@ export  const Action = styled(Item)`
     color: ${({ theme }) => theme.white.w100};
     background-color: ${({ theme }) => theme.orange.o100};
   }
+`;
+
+export const Video = styled.video`
+  position: relative;
+  top: -202px;
+  left: 52px;
+  background: #1e1c1f;
+  border-radius: 5px;
+`;
+
+export const MainImage = styled(Image)`
+  width: 100%;
 `;
