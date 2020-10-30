@@ -99,6 +99,24 @@ export const Video = styled.video`
   border-radius: 5px;
 `;
 
+export const MainImageContainer = styled.div`
+  background: #1c1c1c;
+  position: absolute;
+  top: 5%;
+  left: 14%;
+  width: 72%;
+  padding: 3px 3px 3.5% 3px;
+`;
+
 export const MainImage = styled(Image)`
   width: 100%;
+`;
+
+export const ComposeContainer = styled.div`
+  position: relative;
+  top: 0;
+  right: 0;
+  max-width: 32%;
+  margin-top: 9vw;
+  height: fit-content;
 `;
