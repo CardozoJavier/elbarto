@@ -66,6 +66,11 @@ export const Section = styled.section`
       }
     }
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -119,4 +124,8 @@ export const ComposeContainer = styled.div`
   max-width: 32%;
   margin-top: 9vw;
   height: fit-content;
+
+  @media (max-width: 768px) {
+    max-width: 50%;
+  }
 `;
