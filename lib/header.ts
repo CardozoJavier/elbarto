@@ -11,6 +11,14 @@ const header = {
   ],
   center: [
     {
+      text: 'home',
+      type: 'link',
+      href: '/',
+      src: '',
+      passHref: false,
+      target: '',
+    },
+    {
       text: 'about',
       type: 'link',
       href: '/about',
