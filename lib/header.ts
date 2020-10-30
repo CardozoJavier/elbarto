@@ -11,6 +11,14 @@ const header = {
   ],
   center: [
     {
+      text: 'home',
+      type: 'link',
+      href: '/',
+      src: '',
+      passHref: false,
+      target: '',
+    },
+    {
       text: 'about',
       type: 'link',
       href: '/about',
@@ -25,6 +33,14 @@ const header = {
       src: '',
       passHref: false,
       target: '',
+    },
+    {
+      text: 'linkedin',
+      type: 'link',
+      href: 'https://www.linkedin.com/in/javier-andres-cardozo/',
+      passHref: true,
+      target: '_blank',
+      src: '',
     },
     {
       text: 'resume',
