@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import media from '../../utils/media'
 import { Item } from './Header.styles';
+import { Image } from '../UI/styles/UI.styles';
 
 export const Container = styled.div`
   @media (max-width: 3840px) {
@@ -11,11 +12,8 @@ export const Container = styled.div`
 export const MainStyled = styled.main``;
 
 export const Section = styled.section`
-  height: calc(90vh - 242px);
   display: flex;
   justify-content: space-between;
-  margin-top: 5vh;
-
   
   &.right-to-left-animation {
     animation: turn-left .5s;
@@ -48,7 +46,7 @@ export const Section = styled.section`
   &.default-animation {
     opacity: 0;
     animation: turn-default .5s;
-    animation-delay: .8s;
+    animation-delay: 1.5s;
 
     // Preserve styles after animation
     -webkit-animation-fill-mode: forwards;
@@ -68,6 +66,11 @@ export const Section = styled.section`
       }
     }
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -76,10 +79,10 @@ export const TitleContainer = styled.div`
 `;
 
 export  const Title = styled.h1`
-  font-size: 7vw;
+  font-size: 10vw;
   font-family: 'Roboto Slab', serif;
   color: ${({ theme }) => theme.white.w08};
-  margin-top: 0;
+  margin: 0;
 `;
 
 export  const Action = styled(Item)`
@@ -90,5 +93,39 @@ export  const Action = styled(Item)`
   &:hover {
     color: ${({ theme }) => theme.white.w100};
     background-color: ${({ theme }) => theme.orange.o100};
+  }
+`;
+
+export const Video = styled.video`
+  position: relative;
+  top: -202px;
+  left: 52px;
+  background: #1e1c1f;
+  border-radius: 5px;
+`;
+
+export const MainImageContainer = styled.div`
+  background: #1c1c1c;
+  position: absolute;
+  top: 5%;
+  left: 14%;
+  width: 72%;
+  padding: 3px 3px 3.5% 3px;
+`;
+
+export const MainImage = styled(Image)`
+  width: 100%;
+`;
+
+export const ComposeContainer = styled.div`
+  position: relative;
+  top: 0;
+  right: 0;
+  max-width: 32%;
+  margin-top: 9vw;
+  height: fit-content;
+
+  @media (max-width: 768px) {
+    max-width: 50%;
   }
 `;
