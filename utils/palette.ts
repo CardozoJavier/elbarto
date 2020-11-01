@@ -2,6 +2,7 @@ const shared = {
   black: {
     b05: 'rgba(0, 0, 0, 0.5)',
     b08: 'rgba(0, 0, 0, 0.8)',
+    b04: 'rgba(0, 0, 0, 0.4)',
   },
   white: {
     w100: '#fff',
