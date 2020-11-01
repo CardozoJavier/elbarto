@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect, useCallback } from 'react';
 import { withTheme } from 'styled-components';
 import Link from 'next/link';
 import {
@@ -78,7 +78,9 @@ const getDesktopHeader = ({ left, center, right }: HeaderProps,): React.ReactEle
     </ItemContainer>
   </>
 );
-
+/**
+ * The mobile menu 
+ */
 const getMobileHeader = (menuClassName, actions, handleMenuClick): React.ReactElement => (
   <MobileHeaderContainer>
     <MenuButtonContainer className={menuClassName} role="button" onClick={handleMenuClick}>
@@ -97,20 +99,26 @@ const getMobileHeader = (menuClassName, actions, handleMenuClick): React.ReactEl
  */
 const Header: React.ReactNode = (): JSX.Element => {
   const [menuClassName, setMenuClassName] = useState(MENU_CLOSED);
+  const [render, setRender] = useState(null);
   const { header } = useContext(Context);
   const { left, center, right } = header || {};
   const actions = [...center, ...right];
 
-  const handleMenuClick = () => {
+  const handleMenuClick = useCallback(() => {
     setMenuClassName(prev => (prev === MENU_CLOSED ? MENU_OPENNED : MENU_CLOSED));
-  };
+  }, []);
+
+  // Is to avoid render issues when use window object
+  useEffect(() => {
+    const headerLinks = isDesktop
+      ? getDesktopHeader({ left, center, right })
+      : getMobileHeader(menuClassName, actions, handleMenuClick)
+    setRender(headerLinks);
+  }, [isDesktop, menuClassName, handleMenuClick]);
 
   return (
     <Container>
-      {isDesktop
-        ? getDesktopHeader({ left, center, right })
-        : getMobileHeader(menuClassName, actions, handleMenuClick)
-      }
+      {render}
     </Container>
   );
 }
