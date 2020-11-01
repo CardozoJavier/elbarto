@@ -18,4 +18,9 @@ export const ActionLink = styled.a`
     cursor: pointer;
     color: ${({ theme }) => theme.orange.o100};
   }
+
+  @media (max-width: 768px) {
+    padding: 20px 0;
+    font-size: 4vw;
+  }
 `;

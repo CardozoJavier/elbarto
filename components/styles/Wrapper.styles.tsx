@@ -6,4 +6,8 @@ export const WrapperContainer = styled.div`
   flex-direction: column;
   padding: 25px;
   transition: background-color .5s;
+  
+  @media (max-width: 768px) {
+    padding: 15px;
+  }
 `;
