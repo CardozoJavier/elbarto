@@ -107,7 +107,7 @@ const Header: React.ReactNode = (): JSX.Element => {
 
   return (
     <Container>
-      {isDesktop()
+      {isDesktop
         ? getDesktopHeader({ left, center, right })
         : getMobileHeader(menuClassName, actions, handleMenuClick)
       }
