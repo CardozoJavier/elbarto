@@ -70,12 +70,17 @@ export const Section = styled.section`
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
+    padding-top: 5vh;
   }
 `;
 
 export const TitleContainer = styled.div`
   display: flex;
   max-width: 50vw;
+
+  @media (max-width: 768px) {
+    max-width: unset;
+  }
 `;
 
 export  const Title = styled.h1`
@@ -83,6 +88,10 @@ export  const Title = styled.h1`
   font-family: 'Roboto Slab', serif;
   color: ${({ theme }) => theme.white.w08};
   margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 15vw;
+  }
 `;
 
 export  const Action = styled(Item)`
@@ -126,6 +135,6 @@ export const ComposeContainer = styled.div`
   height: fit-content;
 
   @media (max-width: 768px) {
-    max-width: 50%;
+    max-width: 90%;
   }
 `;
