@@ -59,7 +59,13 @@ export const Container = styled.div`
   }
 
   @media (max-width: 768px) {
-    padding: 0;
+    padding: 0 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: ${({ theme }) => theme.black.b04};
+    width: 100%;
+    box-shadow: 0px -3px 3px ${({ theme }) => theme.black.b04};
   }
 `;
 
