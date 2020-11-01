@@ -23,10 +23,10 @@ const getDeviceType = (): string => {
   return DESKTOP;
 };
 
-export const isMobile = () => (getDeviceType() === MOBILE);
+export const isMobile = (() => (getDeviceType() === MOBILE))();
 
-export const isTablet = () => (getDeviceType() === TABLET);
+export const isTablet = (() => (getDeviceType() === TABLET))();
 
-export const isDesktop = () => (getDeviceType() === DESKTOP);
+export const isDesktop = (() => (getDeviceType() === DESKTOP))();
 
 export default getDeviceType;

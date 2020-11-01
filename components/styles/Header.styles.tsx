@@ -130,5 +130,6 @@ export const Menu = styled.div`
     transition: width 1s, background-color 1s;
     width: 75px;
     overflow: hidden;
+    z-index: -999;
   }
 `;
