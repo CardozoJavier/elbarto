@@ -16,6 +16,13 @@ export const AboutSection = styled(Section)`
     max-width: 500px;
     max-height: 500px;
   }
+
+  @media (max-width: 768px) {
+    img {
+      height: 50vw;
+      width: 50vw;
+    }
+  }
 `;
 
 export const DescriptionContainer = styled.div`
@@ -32,7 +39,7 @@ export const Header = styled.h2`
   margin: 0;
   
   @media (max-width: 768px) {
-    font-size: 4vw;
+    font-size: 6vw;
     max-width: unset;
     margin-top: 10%;
   }
@@ -46,4 +53,8 @@ export const Description = styled.p`
   border-radius: 3px;
   padding: 2vh 2vw;
   font-weight: 600;
+
+  @media (max-width: 768px) {
+    font-size: 4vw;
+  }
 `;

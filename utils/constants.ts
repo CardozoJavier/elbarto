@@ -36,3 +36,10 @@ export const HREF_ABOUT = '/about';
 export const HREF_RESUME = '/resume';
 export const HREF_CONTACT = '/contact';
 export const HREF_PORTFOLIO = '/portfolio';
+
+export const MOBILE = 'mobile';
+export const TABLET = 'tablet';
+export const DESKTOP = 'desktop';
+
+export const MENU_CLOSED = 'menu-closed';
+export const MENU_OPENNED = 'menu-openned';

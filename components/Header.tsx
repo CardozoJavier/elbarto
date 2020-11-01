@@ -1,17 +1,24 @@
-import { useContext } from 'react';
+import { useState, useContext } from 'react';
 import { withTheme } from 'styled-components';
 import Link from 'next/link';
 import {
+  Menu,
+  Item,
   Container,
   ItemContainer,
-  Item,
+  MenuButtonLine,
+  MenuButtonContainer,
+  MobileHeaderContainer,
 } from './styles/Header.styles';
 import {
   CONTACT_LINK,
   HEADER_ICON,
   LINK,
   IMAGE,
+  MENU_CLOSED,
+  MENU_OPENNED,
 } from '../utils/constants';
+import { isDesktop } from '../utils/getDeviceType';
 import Context from '../context';
 
 interface Item {
@@ -30,15 +37,15 @@ export interface HeaderProps {
 }
 
 interface RenderItem {
-  (item: Item): JSX.Element
+  (item: Item, customClassName?: string): JSX.Element
 }
 
-const renderItem: RenderItem = (item: Item): JSX.Element => {
+const renderItem: RenderItem = (item: Item, customClassName: string): JSX.Element => {
   const { type, passHref } = item || {};
   if (type === LINK) {
     return (
       <Link href={item.href} key={item.text} passHref={passHref}>
-        <Item target={item.target}>
+        <Item target={item.target} className={customClassName}>
           {item.text}
         </Item>
       </Link>
@@ -58,24 +65,52 @@ const renderItem: RenderItem = (item: Item): JSX.Element => {
   return null;
 };
 
+const getDesktopHeader = ({ left, center, right }: HeaderProps,): React.ReactElement => (
+  <>
+    <ItemContainer>
+      {Array.isArray(left) && left.map(item => renderItem(item))}
+    </ItemContainer>
+    <ItemContainer>
+      {Array.isArray(center) && center.map(item => renderItem(item))}
+    </ItemContainer>
+    <ItemContainer className={CONTACT_LINK}>
+      {Array.isArray(right) && right.map(item => renderItem(item))}
+    </ItemContainer>
+  </>
+);
+
+const getMobileHeader = (menuClassName, actions, handleMenuClick): React.ReactElement => (
+  <MobileHeaderContainer>
+    <MenuButtonContainer className={menuClassName} role="button" onClick={handleMenuClick}>
+      <MenuButtonLine className={`${menuClassName} top-line`} />
+      <MenuButtonLine className={`${menuClassName} middle-line`} />
+      <MenuButtonLine className={`${menuClassName} bottom-line`} />
+    </MenuButtonContainer>
+    <Menu className={menuClassName}>
+      {actions.map(action => (renderItem(action, menuClassName)))}
+    </Menu>
+  </MobileHeaderContainer>
+);
+
 /**
  * The header component with links to other pages
  */
 const Header: React.ReactNode = (): JSX.Element => {
+  const [menuClassName, setMenuClassName] = useState(MENU_CLOSED);
   const { header } = useContext(Context);
   const { left, center, right } = header || {};
+  const actions = [...center, ...right];
+
+  const handleMenuClick = () => {
+    setMenuClassName(prev => (prev === MENU_CLOSED ? MENU_OPENNED : MENU_CLOSED));
+  };
 
   return (
     <Container>
-      <ItemContainer>
-        {Array.isArray(left) && left.map(item => renderItem(item))}
-      </ItemContainer>
-      <ItemContainer>
-        {Array.isArray(center) && center.map(item => renderItem(item))}
-      </ItemContainer>
-      <ItemContainer className={CONTACT_LINK}>
-        {Array.isArray(right) && right.map(item => renderItem(item))}
-      </ItemContainer>
+      {isDesktop()
+        ? getDesktopHeader({ left, center, right })
+        : getMobileHeader(menuClassName, actions, handleMenuClick)
+      }
     </Container>
   );
 }
