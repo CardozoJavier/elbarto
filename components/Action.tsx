@@ -10,6 +10,16 @@ import {
 } from '../utils/constants';
 import { ArrowIcon } from './UI';
 
+type Props = {
+  type: string;
+  text: string;
+  href?: string;
+  icon?: string;
+  className?: string;
+  onClick?: () => void;
+  passHref?: boolean;
+};
+
 const getIcon = (icon) => {
   switch (icon) {
     case ARROW_ICON:
@@ -19,9 +29,9 @@ const getIcon = (icon) => {
   }
 };
 
-const renderLink = (text: string, href: string, icon: string): React.ReactElement => (
-  <Link href={href}>
-    <ActionLink>
+const renderLink = (text: string, href: string, icon: string, passHref: boolean): React.ReactElement => (
+  <Link href={href} passHref={passHref}>
+    <ActionLink target={passHref ? '_blank' : ''}>
       {text}
       {icon && getIcon(icon)}
     </ActionLink>
@@ -32,10 +42,10 @@ const renderButton = (text: string, onClick: () => void) => (
   <button onClick={onClick}>{text}</button>
 );
 
-const renderAction = (type: string, text: string, href: string, icon: string, onClick: () => void): React.ReactElement => {
+const renderAction = ({ type, text, href, icon, onClick, passHref }: Props): React.ReactElement => {
   switch (type) {
     case LINK:
-      return renderLink(text, href, icon);
+      return renderLink(text, href, icon, passHref);
     case BUTTON:
       return renderButton(text, onClick);
     default:
@@ -43,18 +53,9 @@ const renderAction = (type: string, text: string, href: string, icon: string, on
   }
 };
 
-type Props = {
-  type: string;
-  text: string;
-  href?: string;
-  icon?: string;
-  className: string;
-  onClick?: () => void;
-};
-
-const Action = ({ type, text, href, className, icon, onClick }: Props): React.ReactElement => (
+const Action = ({ type, text, href, className, icon, onClick, passHref }: Props): React.ReactElement => (
   <ActionContainer className={className}>
-    {renderAction(type, text, href, icon, onClick)}
+    {renderAction({ type, text, href, icon, onClick, passHref })}
   </ActionContainer>
 );
 
