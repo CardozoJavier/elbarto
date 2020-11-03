@@ -36,7 +36,7 @@ export const Container = styled.div`
         transition: transform .3s;
         transform: translateX(-10px);
         path {
-          fill: ${({ theme }) => theme.orange.o100};
+          fill: ${({ theme }) => theme.orange.o40};
         }
       }
     }
@@ -52,7 +52,7 @@ export const Container = styled.div`
         transition: transform .3s;
         transform: rotate(180deg) translateX(-10px);
         path {
-          fill: ${({ theme }) => theme.orange.o100};
+          fill: ${({ theme }) => theme.orange.o40};
         }
       }
     }
@@ -63,9 +63,18 @@ export const Container = styled.div`
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: ${({ theme }) => theme.black.b04};
+    background-color: ${({ theme }) => theme.orange.o40};
     width: 100%;
-    box-shadow: 0px -3px 3px ${({ theme }) => theme.black.b04};
+    box-shadow: 0px -3px 3px 3px ${({ theme }) => theme.orange.o40};
+    .only-prev, .prev-action, .only-next, .next-action {
+      &:hover {
+        svg {
+          path {
+            fill: ${({ theme }) => theme.white.w100};
+          }
+        }
+      }
+    }
   }
 `;
 

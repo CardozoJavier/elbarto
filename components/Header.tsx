@@ -20,6 +20,7 @@ import {
 } from '../utils/constants';
 import { isDesktop } from '../utils/getDeviceType';
 import Context from '../context';
+import Action from './Action';
 
 interface Item {
   text: string
@@ -88,6 +89,7 @@ const getMobileHeader = (menuClassName, actions, handleMenuClick): React.ReactEl
       <MenuButtonLine className={`${menuClassName} middle-line`} />
       <MenuButtonLine className={`${menuClassName} bottom-line`} />
     </MenuButtonContainer>
+    <Action type={LINK} text={'Contact'} href={'mailto:cardozojavier.c@gmail.com'} className={'custom-button'} passHref={true} />
     <Menu className={menuClassName}>
       {actions.map(action => (renderItem(action, menuClassName)))}
     </Menu>
