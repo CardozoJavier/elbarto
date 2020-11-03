@@ -25,10 +25,10 @@ export const ItemContainer = styled.div`
   &.contact-link {
     a {
       color: ${({ theme }) => theme.white.w08};
-      background-color: ${({ theme }) => theme.orange.o50};
+      background-color: ${({ theme }) => theme.orange.o40};
       border-radius: 3px;
       &:hover {
-        background-color: ${({ theme }) => theme.orange.o100};
+        background-color: ${({ theme }) => theme.orange.o60};
         color: ${({ theme }) => theme.white.w100};
       }
     }
@@ -61,7 +61,11 @@ export const Item = styled.a`
   }
 `;
 
-export const MobileHeaderContainer = styled.div``;
+export const MobileHeaderContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+`;
 
 export const MenuButtonContainer = styled.div`
   position: absolute;
@@ -94,7 +98,7 @@ export const MenuButtonLine = styled.div`
   }
   &.menu-openned {
     transition: transform 1s, opacity 1.5s;
-    background-color: ${({ theme }) => theme.white.w08};
+    background-color: ${({ theme }) => theme.orange.o40};
 
     &.top-line {
       transform: rotate(45deg) translate(5px, 4px);
