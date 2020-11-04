@@ -131,9 +131,9 @@ export const Menu = styled.div`
   }
 
   &.menu-closed {
-    transition: width 1s, background-color 1s;
+    transition: width 1s, background-color 1s, visibility 1s;
     width: 75px;
     overflow: hidden;
-    z-index: -999;
+    visibility: hidden;
   }
 `;
