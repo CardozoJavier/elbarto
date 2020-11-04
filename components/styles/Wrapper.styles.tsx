@@ -10,6 +10,6 @@ export const WrapperContainer = styled.div`
   @media (max-width: 768px) {
     padding: 15px;
     height: unset;
-    margin-bottom: 55px;
+    margin-bottom: 12vh;
   }
 `;
