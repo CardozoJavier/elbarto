@@ -10,6 +10,6 @@ export const WrapperContainer = styled.div`
   @media (max-width: 768px) {
     padding: 15px;
     height: unset;
-    margin-bottom: 12vh;
+    margin-bottom: calc(var(--vh, 1vh) * 10);
   }
 `;
