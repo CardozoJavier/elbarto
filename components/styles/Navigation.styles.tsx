@@ -5,7 +5,14 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-top: auto;
-  padding: 0 5vw;
+  padding: 2vh 5vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: ${({ theme }) => theme.black.b08};
+  box-shadow: 0px -3px 3px 3px ${({ theme }) => theme.black.b08};
+
 
   .only-prev {
     margin-right: auto;
