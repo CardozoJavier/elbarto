@@ -11,15 +11,17 @@ const shared = {
   },
   orange: {
     o100: '#ce8832',
-    o40: '#FF5722',
-    o50: '#ed4a00',
     o60: '#c63c00',
+    o50: '#ed4a00',
+    o40: '#FF5722',
     o30: '#ff9586',
+    o10: '#ffdbd7',
   },
   gray: {
     g0: '#FBFBFD',
     g1: '#EFF0F5',
     g07: '#C5C3C3',
+    g100: '#1f2021',
   },
   purple90: '#5e5e90',
 };

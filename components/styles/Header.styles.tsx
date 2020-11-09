@@ -4,6 +4,7 @@ export const Container = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 33px;
 `;
 
 export const ItemContainer = styled.div`
@@ -131,9 +132,9 @@ export const Menu = styled.div`
   }
 
   &.menu-closed {
-    transition: width 1s, background-color 1s;
+    transition: width 1s, background-color 1s, visibility 1s;
     width: 75px;
     overflow: hidden;
-    z-index: -999;
+    visibility: hidden;
   }
 `;
