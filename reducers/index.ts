@@ -1,3 +1,4 @@
+import { Dispatch } from 'react';
 import toggleReducer, { initialState as toggle } from './toggleReducer';
 import headerReducer, { initialState as header } from './headerReducer';
 import themeReducer, { initialState as theme } from './themeReducer';
@@ -12,7 +13,7 @@ import { MainProps } from '../components/Main';
 import { AboutProps } from '../components/About';
 import { ResumeProps } from '../components/Resume';
 
-export const initialState = {
+export const initialState: State = {
   main,
   navigation,
   header,
@@ -20,7 +21,7 @@ export const initialState = {
   theme,
   about,
   resume,
-  dispatch: null
+  dispatch: () => null,
 };
 
 export interface State {
@@ -31,6 +32,7 @@ export interface State {
   theme: string
   about: AboutProps
   resume: ResumeProps
+  dispatch: Dispatch<Action>
 };
 
 export interface Action {
@@ -46,4 +48,5 @@ export const combineReducer = (state: State, action: Action): State => ({
   main: mainReducer(state.main, action),
   about: aboutReducer(state.about, action),
   resume: resumeReducer(state.resume, action),
+  dispatch: () => null,
 });
