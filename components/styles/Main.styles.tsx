@@ -14,6 +14,7 @@ export const MainStyled = styled.main``;
 export const Section = styled.section`
   display: flex;
   justify-content: space-between;
+  margin: 33px;
   
   &.right-to-left-animation {
     animation: turn-left .5s;

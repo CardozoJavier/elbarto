@@ -43,3 +43,16 @@ export const DESKTOP = 'desktop';
 
 export const MENU_CLOSED = 'menu-closed';
 export const MENU_OPENNED = 'menu-openned';
+
+export const LOUD = 'loud';
+export const GHOST = 'ghost';
+export const BUTTON_SOLID = 'button-solid';
+export const BUTTON_LINE = 'button-line';
+
+export const SECOND_RESUME_SECTION = 'second-resume-section';
+
+export const CUSTOM_TITLE = 'custom-title';
+export const CUSTOM_SUBTITLE = 'custom-subtitle';
+export const CUSTOM_LIST_ITEM = 'custom-list-item';
+
+export const DOWNLOAD_RESUME = 'Download resume';

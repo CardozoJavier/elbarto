@@ -1,18 +1,18 @@
-import { useEffect, useContext } from 'react';
+import { ReactElement, useEffect, useContext } from 'react';
 import {
   DEFAULT_ANIMATION,
   RESUME,
   PORTFOLIO,
   HREF_PORTFOLIO,
 } from '../utils/constants';
-import { App } from '../components';
+import { App, ResumeComponent } from '../components';
 import classes from '../utils/classes';
 import Context from '../context';
 import WIP from '../components/WIP';
 
-const Portfolio = (props) => {
-  const { dispatch, navigation } = useContext(Context);
-  const { from } = navigation || {};
+const Resume = (props): ReactElement => {
+  const { dispatch, resume, navigation } = useContext(Context);
+  const { from, className } = navigation || {};
 
   useEffect(() => {
     const payload = {
@@ -29,9 +29,9 @@ const Portfolio = (props) => {
 
   return (
     <App {...props}>
-      <WIP />
+      <ResumeComponent {...resume} className={className} />
     </App>
   );
 }
 
-export default Portfolio;
+export default Resume;

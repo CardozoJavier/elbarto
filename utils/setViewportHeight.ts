@@ -3,9 +3,15 @@ import windowExists from './windowExists';
 
 const setViewportHeight = (): void => {
   if (windowExists) {
+    let init = true;
+    let vh = window.innerHeight;
+    if (init) {
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+      init = false;
+    }
     const resizeHandler = () => {
+      vh = window.innerHeight;
       // We execute the same script as before
-      const vh = window.innerHeight * 0.01;
       document.documentElement.style.setProperty('--vh', `${vh}px`);
     };
     // We listen to the resize event
