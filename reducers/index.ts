@@ -4,11 +4,13 @@ import themeReducer, { initialState as theme } from './themeReducer';
 import navigationReducer, { initialState as navigation } from './navigationReducer';
 import mainReducer, { initialState as main } from './mainReducer';
 import aboutReducer, { initialState as about } from './aboutReducer';
+import resumeReducer, { initialState as resume } from './resumeReducer';
 import { HeaderProps } from '../components/Header';
 import { ToggleProps } from '../components/Toggle';
 import { NavigationProps } from '../components/Navigation';
 import { MainProps } from '../components/Main';
 import { AboutProps } from '../components/About';
+import { ResumeProps } from '../components/Resume';
 
 export const initialState = {
   main,
@@ -17,6 +19,7 @@ export const initialState = {
   toggle,
   theme,
   about,
+  resume,
   dispatch: null
 };
 
@@ -27,6 +30,7 @@ export interface State {
   toggle: ToggleProps
   theme: string
   about: AboutProps
+  resume: ResumeProps
 };
 
 export interface Action {
@@ -41,4 +45,5 @@ export const combineReducer = (state: State, action: Action): State => ({
   navigation: navigationReducer(state.navigation, action),
   main: mainReducer(state.main, action),
   about: aboutReducer(state.about, action),
+  resume: resumeReducer(state.resume, action),
 });
