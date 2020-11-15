@@ -73,6 +73,10 @@ export const Item = styled.a`
   &.menu-openned {
     color: ${({ theme }) => theme.white.w08};
   }
+
+  &.highlight {
+    color: ${({ theme }) => theme.orange.o100};
+  }
 `;
 
 export const MobileHeaderContainer = styled.div`
