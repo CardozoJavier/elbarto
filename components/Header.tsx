@@ -108,7 +108,6 @@ const Header = ({ left, center, right, active }): JSX.Element => {
   const [menuClassName, setMenuClassName] = useState(MENU_CLOSED);
   const [render, setRender] = useState(null);
   const actions = [...center, ...right];
-  console.log({ active }, ' header ')
 
   const handleMenuClick = useCallback(() => {
     setMenuClassName(prev => (prev === MENU_CLOSED ? MENU_OPENNED : MENU_CLOSED));
