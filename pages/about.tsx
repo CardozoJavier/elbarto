@@ -9,10 +9,9 @@ import {
   ABOUT,
   HREF_HOME,
   HREF_RESUME,
-  DEFAULT_ANIMATION,
 } from '../utils/constants';
 import Context from '../context';
-import classes from '../utils/classes';
+import getAnimation from '../utils/getAnimation';
 
 /**
  * About me page
@@ -23,8 +22,9 @@ const About: React.ReactNode = (props): React.ReactNode => {
   const { from, className } = navigation || {};
 
   useEffect(() => {
+    const className = getAnimation(ABOUT, from);
     const payload = {
-      className: classes.get(from) || DEFAULT_ANIMATION,
+      className,
       from: ABOUT,
       prev: {
         text: HOME,

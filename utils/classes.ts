@@ -1,23 +1,27 @@
 import {
   HOME,
-  LOUD,
-  GHOST,
   RESUME,
   ABOUT,
   PORTFOLIO,
-  BUTTON_LINE,
-  BUTTON_SOLID,
-  RIGHT_TO_LEFT_ANIMATION,
-  LEFT_TO_RIGHT_ANIMATION,
 } from './constants';
 
 const classes = new Map([
-  [HOME, RIGHT_TO_LEFT_ANIMATION],
-  [ABOUT, LEFT_TO_RIGHT_ANIMATION],
-  [RESUME, RIGHT_TO_LEFT_ANIMATION],
-  [PORTFOLIO, LEFT_TO_RIGHT_ANIMATION],
-  [LOUD, BUTTON_SOLID],
-  [GHOST, BUTTON_LINE],
+  [HOME, {
+    left: [],
+    right: [ABOUT, RESUME, PORTFOLIO],
+  }],
+  [ABOUT, {
+    left: [HOME],
+    right: [RESUME, PORTFOLIO],
+  }],
+  [RESUME, {
+    left: [HOME, ABOUT],
+    right: [PORTFOLIO],
+  }],
+  [PORTFOLIO, {
+    left: [HOME, ABOUT, RESUME],
+    right: [],
+  }]
 ]);
 
 export default classes;

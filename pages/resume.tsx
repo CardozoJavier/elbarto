@@ -1,6 +1,5 @@
 import { ReactElement, useEffect, useContext } from 'react';
 import {
-  DEFAULT_ANIMATION,
   RESUME,
   PORTFOLIO,
   HREF_PORTFOLIO,
@@ -8,16 +7,17 @@ import {
   HREF_ABOUT,
 } from '../utils/constants';
 import { App, ResumeComponent } from '../components';
-import classes from '../utils/classes';
 import Context from '../context';
+import getAnimation from '../utils/getAnimation';
 
 const Resume = (props): ReactElement => {
   const { dispatch, resume, navigation } = useContext(Context);
   const { from, className } = navigation || {};
 
   useEffect(() => {
+    const className = getAnimation(RESUME, from);
     const payload = {
-      className: classes.get(from) || DEFAULT_ANIMATION,
+      className,
       from: RESUME,
       prev: {
         text: ABOUT,

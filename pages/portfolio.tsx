@@ -3,20 +3,20 @@ import {
   RESUME,
   PORTFOLIO,
   HREF_RESUME,
-  DEFAULT_ANIMATION,
 } from '../utils/constants';
 import { App } from '../components';
-import classes from '../utils/classes';
 import Context from '../context';
 import WIP from '../components/WIP';
+import getAnimation from '../utils/getAnimation';
 
 const Portfolio = (props) => {
   const { dispatch, navigation } = useContext(Context);
   const { from } = navigation || {};
 
   useEffect(() => {
+    const className = getAnimation(PORTFOLIO, from);
     const payload = {
-      className: classes.get(from) || DEFAULT_ANIMATION,
+      className,
       from: PORTFOLIO,
       prev: {
         text: RESUME,
