@@ -59,5 +59,6 @@ export const SECTION_TITLE = 'section-title';
 export const DOWNLOAD_RESUME = 'Download resume';
 
 export const MARGIN_20 = 'margin-20';
+export const CUSTOM_PADDING = 'custom-padding';
 
 export const ARROW_BUTTON = 'arrow-button';

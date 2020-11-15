@@ -172,7 +172,7 @@ export const SubSection = styled.div`
       margin-left: 20px;
     }
 
-    &.techs {
+    &.custom-padding {
       padding: 0 20px;
     }
   }
