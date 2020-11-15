@@ -4,11 +4,12 @@ import {
   RESUME,
   PORTFOLIO,
   HREF_PORTFOLIO,
+  ABOUT,
+  HREF_ABOUT,
 } from '../utils/constants';
 import { App, ResumeComponent } from '../components';
 import classes from '../utils/classes';
 import Context from '../context';
-import WIP from '../components/WIP';
 
 const Resume = (props): ReactElement => {
   const { dispatch, resume, navigation } = useContext(Context);
@@ -19,16 +20,19 @@ const Resume = (props): ReactElement => {
       className: classes.get(from) || DEFAULT_ANIMATION,
       from: RESUME,
       prev: {
+        text: ABOUT,
+        href: HREF_ABOUT,
+      },
+      next: {
         text: PORTFOLIO,
         href: HREF_PORTFOLIO,
       },
-      next: null,
     };
     dispatch({ type: RESUME, payload });
   }, []);
 
   return (
-    <App {...props}>
+    <App {...props} active={RESUME}>
       <ResumeComponent {...resume} className={className} />
     </App>
   );

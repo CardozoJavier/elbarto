@@ -5,10 +5,10 @@ import {
 } from '../components';
 import {
   HOME,
-  ABOUT_ME,
-  PORTFOLIO,
+  RESUME,
+  ABOUT,
   HREF_HOME,
-  HREF_PORTFOLIO,
+  HREF_RESUME,
   DEFAULT_ANIMATION,
 } from '../utils/constants';
 import Context from '../context';
@@ -25,21 +25,21 @@ const About: React.ReactNode = (props): React.ReactNode => {
   useEffect(() => {
     const payload = {
       className: classes.get(from) || DEFAULT_ANIMATION,
-      from: ABOUT_ME,
+      from: ABOUT,
       prev: {
         text: HOME,
         href: HREF_HOME,
       },
       next: {
-        text: PORTFOLIO,
-        href: HREF_PORTFOLIO,
+        text: RESUME,
+        href: HREF_RESUME,
       }
     };
-    dispatch({ type: ABOUT_ME, payload });
+    dispatch({ type: ABOUT, payload });
   }, []);
 
   return (
-    <App {...props}>
+    <App {...props} active={ABOUT}>
       <AboutComponent title={title} description={description} className={className} />
     </App>
   );

@@ -1,11 +1,9 @@
 import { useEffect, useContext } from 'react';
 import {
   RESUME,
+  PORTFOLIO,
   HREF_RESUME,
   DEFAULT_ANIMATION,
-  ABOUT_ME,
-  HREF_ABOUT,
-  PORTFOLIO,
 } from '../utils/constants';
 import { App } from '../components';
 import classes from '../utils/classes';
@@ -21,19 +19,16 @@ const Portfolio = (props) => {
       className: classes.get(from) || DEFAULT_ANIMATION,
       from: PORTFOLIO,
       prev: {
-        text: ABOUT_ME,
-        href: HREF_ABOUT,
-      },
-      next: {
         text: RESUME,
         href: HREF_RESUME,
-      }
+      },
+      next: null,
     };
     dispatch({ type: PORTFOLIO, payload });
   }, []);
 
   return (
-    <App {...props}>
+    <App {...props} active={PORTFOLIO}>
       <WIP />
     </App>
   );

@@ -27,9 +27,9 @@ const header = {
       target: '',
     },
     {
-      text: 'portfolio',
+      text: 'resume',
       type: 'link',
-      href: '/portfolio',
+      href: '/resume',
       src: '',
       passHref: false,
       target: '',
@@ -43,9 +43,9 @@ const header = {
       src: '',
     },
     {
-      text: 'resume',
+      text: 'portfolio',
       type: 'link',
-      href: '/resume',
+      href: '/portfolio',
       src: '',
       passHref: false,
       target: '',
