@@ -5,14 +5,13 @@ import {
 } from '../components';
 import {
   HOME,
-  ABOUT_ME,
-  PORTFOLIO,
+  RESUME,
+  ABOUT,
   HREF_HOME,
-  HREF_PORTFOLIO,
-  DEFAULT_ANIMATION,
+  HREF_RESUME,
 } from '../utils/constants';
 import Context from '../context';
-import classes from '../utils/classes';
+import getAnimation from '../utils/getAnimation';
 
 /**
  * About me page
@@ -23,23 +22,24 @@ const About: React.ReactNode = (props): React.ReactNode => {
   const { from, className } = navigation || {};
 
   useEffect(() => {
+    const className = getAnimation(ABOUT, from);
     const payload = {
-      className: classes.get(from) || DEFAULT_ANIMATION,
-      from: ABOUT_ME,
+      className,
+      from: ABOUT,
       prev: {
         text: HOME,
         href: HREF_HOME,
       },
       next: {
-        text: PORTFOLIO,
-        href: HREF_PORTFOLIO,
+        text: RESUME,
+        href: HREF_RESUME,
       }
     };
-    dispatch({ type: ABOUT_ME, payload });
+    dispatch({ type: ABOUT, payload });
   }, []);
 
   return (
-    <App {...props}>
+    <App {...props} active={ABOUT}>
       <AboutComponent title={title} description={description} className={className} />
     </App>
   );

@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { withTheme } from 'styled-components';
 import Link from 'next/link';
 import {
@@ -17,9 +17,9 @@ import {
   IMAGE,
   MENU_CLOSED,
   MENU_OPENNED,
+  HIGHLIGHT,
 } from '../utils/constants';
 import { isDesktop } from '../utils/getDeviceType';
-import Context from '../context';
 import Action from './Action';
 
 interface Item {
@@ -35,18 +35,23 @@ export interface HeaderProps {
   left: Item[]
   center: Item[]
   right: Item[]
+  active: string
 }
 
 interface RenderItem {
-  (item: Item, customClassName?: string): JSX.Element
+  (item: Item, customClassName?: string, active?: string): JSX.Element
 }
 
-const renderItem: RenderItem = (item: Item, customClassName: string): JSX.Element => {
+const renderItem: RenderItem = (item: Item, customClassName: string, active?: string): JSX.Element => {
   const { type, passHref } = item || {};
+  const activeToLowerCase = active && active.toLowerCase();
+  const textToLowerCase = item.text && item.text.toLowerCase();
+  const highlight = textToLowerCase === activeToLowerCase ? HIGHLIGHT : '';
+
   if (type === LINK) {
     return (
       <Link href={item.href} key={item.text} passHref={passHref}>
-        <Item target={item.target} className={customClassName}>
+        <Item target={item.target} className={`${customClassName} ${highlight}`}>
           {item.text}
         </Item>
       </Link>
@@ -66,13 +71,13 @@ const renderItem: RenderItem = (item: Item, customClassName: string): JSX.Elemen
   return null;
 };
 
-const getDesktopHeader = ({ left, center, right }: HeaderProps,): React.ReactElement => (
+const getDesktopHeader = ({ left, center, right, active }: HeaderProps,): React.ReactElement => (
   <>
     <ItemContainer>
       {Array.isArray(left) && left.map(item => renderItem(item))}
     </ItemContainer>
     <ItemContainer>
-      {Array.isArray(center) && center.map(item => renderItem(item))}
+      {Array.isArray(center) && center.map(item => renderItem(item, null, active))}
     </ItemContainer>
     <ItemContainer className={CONTACT_LINK}>
       {Array.isArray(right) && right.map(item => renderItem(item))}
@@ -99,11 +104,9 @@ const getMobileHeader = (menuClassName, actions, handleMenuClick): React.ReactEl
 /**
  * The header component with links to other pages
  */
-const Header: React.ReactNode = (): JSX.Element => {
+const Header = ({ left, center, right, active }): JSX.Element => {
   const [menuClassName, setMenuClassName] = useState(MENU_CLOSED);
   const [render, setRender] = useState(null);
-  const { header } = useContext(Context);
-  const { left, center, right } = header || {};
   const actions = [...center, ...right];
 
   const handleMenuClick = useCallback(() => {
@@ -113,7 +116,7 @@ const Header: React.ReactNode = (): JSX.Element => {
   // Is to avoid render issues when use window object
   useEffect(() => {
     const headerLinks = isDesktop
-      ? getDesktopHeader({ left, center, right })
+      ? getDesktopHeader({ left, center, right, active })
       : getMobileHeader(menuClassName, actions, handleMenuClick)
     setRender(headerLinks);
   }, [isDesktop, menuClassName, handleMenuClick]);

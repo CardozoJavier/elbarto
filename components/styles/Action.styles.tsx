@@ -69,6 +69,7 @@ export const Button = styled.button`
   }
   font-size: 1.3rem;
   padding: 5px;
+  border-radius: 3px;
   background-color: ${({ theme }) => theme.white.w08};
   border: none;
   color: ${({ theme }) => theme.orange.o40};

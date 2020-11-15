@@ -1,39 +1,34 @@
 import { useEffect, useContext } from 'react';
 import {
   RESUME,
-  HREF_RESUME,
-  DEFAULT_ANIMATION,
-  ABOUT_ME,
-  HREF_ABOUT,
   PORTFOLIO,
+  HREF_RESUME,
 } from '../utils/constants';
 import { App } from '../components';
-import classes from '../utils/classes';
 import Context from '../context';
 import WIP from '../components/WIP';
+import getAnimation from '../utils/getAnimation';
 
 const Portfolio = (props) => {
   const { dispatch, navigation } = useContext(Context);
   const { from } = navigation || {};
 
   useEffect(() => {
+    const className = getAnimation(PORTFOLIO, from);
     const payload = {
-      className: classes.get(from) || DEFAULT_ANIMATION,
+      className,
       from: PORTFOLIO,
       prev: {
-        text: ABOUT_ME,
-        href: HREF_ABOUT,
-      },
-      next: {
         text: RESUME,
         href: HREF_RESUME,
-      }
+      },
+      next: null,
     };
     dispatch({ type: PORTFOLIO, payload });
   }, []);
 
   return (
-    <App {...props}>
+    <App {...props} active={PORTFOLIO}>
       <WIP />
     </App>
   );
