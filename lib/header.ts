@@ -1,4 +1,5 @@
 const header = {
+  active: null,
   left: [
     {
       text: 'el barto',
