@@ -28,7 +28,7 @@ export const PREV_ACTION = 'prev-action';
 
 export const HOME = 'Home';
 export const RESUME = 'Resume';
-export const ABOUT_ME = 'About me';
+export const ABOUT = 'About';
 export const PORTFOLIO = 'Portfolio';
 
 export const HREF_HOME = '/';
@@ -54,5 +54,12 @@ export const SECOND_RESUME_SECTION = 'second-resume-section';
 export const CUSTOM_TITLE = 'custom-title';
 export const CUSTOM_SUBTITLE = 'custom-subtitle';
 export const CUSTOM_LIST_ITEM = 'custom-list-item';
+export const SECTION_TITLE = 'section-title';
 
 export const DOWNLOAD_RESUME = 'Download resume';
+
+export const MARGIN_20 = 'margin-20';
+export const CUSTOM_PADDING = 'custom-padding';
+
+export const ARROW_BUTTON = 'arrow-button';
+export const HIGHLIGHT = 'highlight';

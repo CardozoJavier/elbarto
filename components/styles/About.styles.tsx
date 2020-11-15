@@ -10,14 +10,11 @@ export const AboutSection = styled(Section)`
   display: flex;
   align-items: center;
   img {
-    width: 25vw;
-    height: 25vw;
     border-radius: 50%;
-    max-width: 500px;
-    max-height: 500px;
   }
 
   @media (max-width: 768px) {
+    padding: 5vh 0 0 0;
     img {
       height: 50vw;
       width: 50vw;
@@ -40,7 +37,7 @@ export const Header = styled.h2`
   
   @media (max-width: 768px) {
     font-size: 6vw;
-    max-width: unset;
+    max-width: 75%;
     margin-top: 10%;
   }
 `;

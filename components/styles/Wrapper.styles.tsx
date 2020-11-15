@@ -6,8 +6,6 @@ export const WrapperContainer = styled.div`
   transition: background-color .5s;
   
   @media (max-width: 768px) {
-    padding: 15px;
     height: unset;
-    margin-bottom: calc(var(--vh, 1vh) * 10);
   }
 `;

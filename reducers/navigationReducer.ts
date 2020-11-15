@@ -1,7 +1,7 @@
 import { NavigationProps } from '../components/Navigation';
 import {
   HOME,
-  ABOUT_ME,
+  ABOUT,
   HREF_ABOUT,
   DEFAULT_ANIMATION,
   PORTFOLIO,
@@ -14,7 +14,7 @@ export const initialState = {
   from: null,
   prev: null,
   next: {
-    text: ABOUT_ME,
+    text: ABOUT,
     href: HREF_ABOUT,
   },
 };
@@ -26,17 +26,17 @@ const navigationReducer = (state: NavigationProps = initialState, action: Action
         ...state,
         ...action.payload,
       };
-    case ABOUT_ME:
-      return {
-        ...state,
-        ...action.payload,
-    };
-    case PORTFOLIO:
+    case ABOUT:
       return {
         ...state,
         ...action.payload,
     };
     case RESUME:
+      return {
+        ...state,
+        ...action.payload,
+    };
+    case PORTFOLIO:
       return {
         ...state,
         ...action.payload,

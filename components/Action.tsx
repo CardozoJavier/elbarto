@@ -2,6 +2,7 @@ import Link from 'next/link';
 import {
   ActionContainer,
   ActionLink,
+  Button,
 } from './styles/Action.styles';
 import {
   LINK,
@@ -38,8 +39,11 @@ const renderLink = (text: string, href: string, icon: string, passHref: boolean)
   </Link>
 );
 
-const renderButton = (text: string, onClick: () => void) => (
-  <button onClick={onClick}>{text}</button>
+const renderButton = (text: string, icon: string, onClick: () => void) => (
+  <Button onClick={onClick}>
+    {text}
+    {icon && getIcon(icon)}
+  </Button>
 );
 
 const renderAction = ({ type, text, href, icon, onClick, passHref }: Props): React.ReactElement => {
@@ -47,7 +51,7 @@ const renderAction = ({ type, text, href, icon, onClick, passHref }: Props): Rea
     case LINK:
       return renderLink(text, href, icon, passHref);
     case BUTTON:
-      return renderButton(text, onClick);
+      return renderButton(text, icon, onClick);
     default:
       return;
   }
