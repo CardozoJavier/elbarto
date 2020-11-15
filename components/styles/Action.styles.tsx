@@ -28,7 +28,8 @@ export const ActionContainer = styled.div`
   &.arrow-button {
     margin: 50px auto 50px 0;
     svg {
-      margin: 0 10px;
+      height: 18px;
+      margin-left: 10px;
       transition: transform .3s;
       transform: rotate(270deg);
       path {
@@ -66,8 +67,9 @@ export const Button = styled.button`
   &:focus {
     outline: none;
   }
-  font-size: 1rem;
-  background-color: transparent;
+  font-size: 1.3rem;
+  padding: 5px;
+  background-color: ${({ theme }) => theme.white.w08};
   border: none;
   color: ${({ theme }) => theme.orange.o40};
   display: flex;

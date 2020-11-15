@@ -21,6 +21,7 @@ export const ResumeSection = styled(Section)`
   }
 
   @media (max-width: 768px) {
+    margin: 33px 20px 58px 20px;
     align-items: flex-start;
     margin-bottom: 58px;
     min-height: calc(100vh - 34px);
