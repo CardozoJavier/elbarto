@@ -24,22 +24,19 @@ export const ActionContainer = styled.div`
         }
       }
     }
-
-    &.arrow-button {
-      margin: 50px auto 50px 0;
-      svg {
-        margin: 0 10px;
-        transition: transform .3s;
-        transform: rotate(270deg);
-        path {
-          fill: ${({ theme }) => theme.orange.o40};
-        }
+  }
+  &.arrow-button {
+    margin: 50px auto 50px 0;
+    svg {
+      margin: 0 10px;
+      transition: transform .3s;
+      transform: rotate(270deg);
+      path {
+        fill: ${({ theme }) => theme.orange.o40};
       }
-      &:hover {
-        svg {
-          transition: transform .3s;
-        }
-      }
+    }
+    button:hover {
+      cursor: pointer;
     }
   }
 `;
@@ -69,12 +66,10 @@ export const Button = styled.button`
   &:focus {
     outline: none;
   }
-  @media (max-width: 768px) {
-    font-size: 1rem;
-    background-color: transparent;
-    border: none;
-    color: ${({ theme }) => theme.orange.o40};
-    display: flex;
-    align-items: center;
-  }
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  color: ${({ theme }) => theme.orange.o40};
+  display: flex;
+  align-items: center;
 `;
