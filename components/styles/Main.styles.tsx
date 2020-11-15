@@ -72,6 +72,7 @@ export const Section = styled.section`
     flex-direction: column;
     align-items: center;
     padding-top: 5vh;
+    margin-bottom: 78px;
   }
 `;
 

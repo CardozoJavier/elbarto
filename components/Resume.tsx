@@ -1,24 +1,28 @@
 import parse from 'html-react-parser';
+import Action from './Action';
 import {
-  GHOST,
+  BUTTON,
+  MARGIN_20,
+  ARROW_ICON,
   CUSTOM_TITLE,
-  CUSTOM_SUBTITLE,
-  CUSTOM_LIST_ITEM,
-  SECOND_RESUME_SECTION,
+  ARROW_BUTTON,
+  SECTION_TITLE,
+  CUSTOM_PADDING,
   DOWNLOAD_RESUME,
+  CUSTOM_SUBTITLE,
+  SECOND_RESUME_SECTION,
 } from '../utils/constants';
 import {
-  ResumeSection as Section,
-  ResumeHeader as Header,
+  Li,
+  Ul,
   Title,
   Subtitle,
-  Ul,
-  Li,
-  RowContainer,
   SubSection,
+  RowContainer,
   TitleContainer,
+  ResumeHeader as Header,
+  ResumeSection as Section,
 } from './styles/Resume.styles';
-import Button from './UI/Button';
 
 const renderUnorderList = (list: string[]): React.ReactElement => (
   <Ul>
@@ -32,7 +36,7 @@ const renderUnorderList = (list: string[]): React.ReactElement => (
 
 const renderTechnologies = ({ title, comfortable, experience }: Technologies): React.ReactElement => (
   <>
-    <Title>{title}</Title>
+    <Title className={SECTION_TITLE}>{title}</Title>
     <Ul>
       <Subtitle>{comfortable.title}</Subtitle>
       {Array.isArray(comfortable.list)
@@ -50,7 +54,7 @@ const renderTechnologies = ({ title, comfortable, experience }: Technologies): R
 
 const renderSectionRow = ({ title, row }: RowSection): React.ReactElement => (
   <>
-    <Title>{title}</Title>
+    <Title className={`${SECTION_TITLE} ${MARGIN_20}`}>{title}</Title>
     <Ul>
       {Array.isArray(row)
         ? row.map(item => (
@@ -62,10 +66,10 @@ const renderSectionRow = ({ title, row }: RowSection): React.ReactElement => (
             {renderUnorderList(item.description)}
             {
               item.project ?
-              <>
-                <Title className={CUSTOM_TITLE}>{item.project.title}</Title>
+              <span className="custom-li">
+                <Title className={`${CUSTOM_TITLE} ${MARGIN_20}`}>{item.project.title}</Title>
                 {renderUnorderList(item.project.list)}
-              </>
+              </span>
               : null
             }
           </RowContainer>
@@ -92,10 +96,16 @@ const Resume = ({
     <>
       <Section className={className}>
         <Header>{title}</Header>
-        <Button label={DOWNLOAD_RESUME} type={GHOST} onClick={handleDownloadClick} />
+        <Action
+          text={DOWNLOAD_RESUME}
+          icon={ARROW_ICON}
+          type={BUTTON}
+          onClick={handleDownloadClick}
+          className={ARROW_BUTTON}
+        />
       </Section>
       <Section className={SECOND_RESUME_SECTION}>
-        <SubSection>
+        <SubSection className={CUSTOM_PADDING}>
           {renderTechnologies(technologies)}
         </SubSection>
         <SubSection>
@@ -104,8 +114,8 @@ const Resume = ({
         <SubSection>
           {renderSectionRow(education)}
         </SubSection>
-        <SubSection>
-          <Title>{course.title}</Title>
+        <SubSection className={CUSTOM_PADDING}>
+          <Title className={SECTION_TITLE}>{course.title}</Title>
           {renderUnorderList(course.list)}
         </SubSection>
       </Section>

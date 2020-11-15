@@ -4,7 +4,20 @@ export const Container = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 33px;
+
+  @media (min-width: 768px) {
+    margin: 33px;
+  }
+
+  @media (max-width: 768px) {
+    position: fixed;
+    width: 100%;
+    background-color: #e5e5e5;
+    margin: 0;
+    padding: 15px;
+    z-index: 999;
+    box-shadow: 0px 0px 3px 3px #e5e5e5;
+  }
 `;
 
 export const ItemContainer = styled.div`

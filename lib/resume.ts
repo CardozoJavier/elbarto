@@ -34,16 +34,16 @@ const resume = {
     row: [
       {
         title: 'Front-end developer',
-        subtitle: '<a href="https://www.mercadolibre.com" target="_blank">MercadoLibre</a> | Buenos Aires, Argentina - February 2019 - Present',
+        subtitle: '<a href="https://www.mercadolibre.com" target="_blank">MercadoLibre</a> <span class="divisor">|</span> Buenos Aires, Argentina <span class="divisor">-</span> <span class="block">February 2019 - Present</span>',
         description: [
           'Added and tested UI features to asset management section in Mercadopago.',
           'Built from scratch the <a href="https://www.mercadolibre.com.ar/privacidad" target="_blank">data privacy landing page</a>.',
-          'Built and testing the UI of the KYC process which getting the identity validation from users, with an impact on million of these in several countries like Argentina, Brasil, México and Chile.',
+          'Build and testing the UI of the KYC process which getting the identity validation from users, with an impact on million of these in several countries like Argentina, Brasil, México and Chile.',
         ],
       },
       {
         title: 'Full stack developer',
-        subtitle: 'Freelance | Buenos Aires, Argentina - December 2018 - April 2020',
+        subtitle: 'Freelance <span class="divisor">|</span>Buenos Aires, Argentina <span class="divisor">-</span> <span class="block">December 2018 - April 2020</span>',
         description: ['Development of web applications to different end clients.'],
         project: {
           title: 'Projects',
@@ -61,12 +61,12 @@ const resume = {
     row: [
       {
         title: 'Full stack developer',
-        subtitle: '<span className="bold-text">Plataforma 5 Coding Bootcamp</span> | September 2018 - December 2018',
-        description: ['600 hours of an immersive full time course in which I learned in depth about the javascript MERN stack.'],
+        subtitle: '<a href="https://plataforma5.la/" target="_blank">Plataforma 5 Coding Bootcamp</a> <span class="divisor">|</span> <span class="block">September 2018 - December 2018</span>',
+        description: ['600 hours of an immersive full time bootcamp in which I learned in depth about the javascript MERN stack, data structures, algorithms, big O notation and more.'],
       },
       {
         title: 'Technician in automation, control and robotics',
-        subtitle: 'ITUOM | February 2013 - December 2017',
+        subtitle: 'ITUOM <span class="divisor">|</span> <span class="block">February 2013 - December 2017</span>',
         description: [
           'An upper formation degree principally focused on electronics and programming fundamentals.',
           'GPA: 3.88',
@@ -78,17 +78,18 @@ const resume = {
   course: {
     title: 'Courses and certifications',
     list: [
-      '2018 — HTML, CSS & JavaScript fundamentals — <span className="bold-text">Plataforma 5</span>',
-      '2018 — Java Standard Programming J2SE 8.0 — <span className="bold-text">EducaciónIT</span>',
-      '2017 — Data bases & MySQL fundamentals — <span className="bold-text">EducaciónIT</span>',
-      '2017 — Management and administration of automation projects — <span className="bold-text">Universidad Técnologica Nacional</span>',
-      '2017 — Programming of ABB robotic arm — <span className="bold-text">Universidad Técnologica Nacional</span>',
-      '2017 — PLC networking configuration — <span className="bold-text">Universidad Técnologica Nacional</span>',
-      '2016 — PLC advance programming — <span className="bold-text">Universidad Técnologica Nacional</span>',
-      '2016 — PLC basic programming — <span className="bold-text">Universidad Técnologica Nacional</span>',
-      '2016 — Programmable logic controller fundamentals — <span className="bold-text">Universidad Técnologica Nacional</span>',
-      '2016 — Arduino programming — <span className="bold-text">EducaciónIT</span>',
-      '2010 — Office full operator — <span className="bold-text">IAC</span>',
+      '<span class="course-year">2019 —</span> GIT + Github <span class="divisor">—</span> <a href="https://www.udemy.com" target="_blank"><span class="bold-text">Udemy</span></a>',
+      '<span class="course-year">2018 —</span> HTML, CSS & JavaScript fundamentals <span class="divisor">—</span> <a href="https://plataforma5.la/" target="_blank"><span class="bold-text">Plataforma 5</span></a>',
+      '<span class="course-year">2018 —</span> Java Standard Programming J2SE 8.0 <span class="divisor">—</span> <a href="https://www.educacionit.com/" target="_blank"><span class="bold-text">EducaciónIT</span></a>',
+      '<span class="course-year">2017 —</span> Data bases & MySQL fundamentals <span class="divisor">—</span> <a href="https://www.educacionit.com/" target="_blank"><span class="bold-text">EducaciónIT</span></a>',
+      '<span class="course-year">2017 —</span> Automation projects management<span class="divisor">—</span> <a href="https://sceu.frba.utn.edu.ar/" target="_blank"><span class="bold-text">Universidad Técnologica Nacional</span></a>',
+      '<span class="course-year">2017 —</span> Programming of ABB robotic arm <span class="divisor">—</span> <a href="https://sceu.frba.utn.edu.ar/" target="_blank"><span class="bold-text">Universidad Técnologica Nacional</span></a>',
+      '<span class="course-year">2017 —</span> PLC networking configuration <span class="divisor">—</span> <a href="https://sceu.frba.utn.edu.ar/" target="_blank"><span class="bold-text">Universidad Técnologica Nacional</span></a>',
+      '<span class="course-year">2016 —</span> PLC advance programming <span class="divisor">—</span> <a href="https://sceu.frba.utn.edu.ar/" target="_blank"><span class="bold-text">Universidad Técnologica Nacional</span></a>',
+      '<span class="course-year">2016 —</span> PLC basic programming <span class="divisor">—</span> <a href="https://sceu.frba.utn.edu.ar/" target="_blank"><span class="bold-text">Universidad Técnologica Nacional</span></a>',
+      '<span class="course-year">2016 —</span> PLC programming fundamentals <span class="divisor">—</span> <a href="https://sceu.frba.utn.edu.ar/" target="_blank"><span class="bold-text">Universidad Técnologica Nacional</span></a>',
+      '<span class="course-year">2016 —</span> Arduino programming <span class="divisor">—</span> <a href="https://www.educacionit.com/" target="_blank"><span class="bold-text">EducaciónIT</span></a>',
+      '<span class="course-year">2010 —</span> Office full operator <span class="divisor">—</span> <a href="http://www.iac.com.ar/" target="_blank"><span class="bold-text">IAC</span></a>',
     ],
   }
 };

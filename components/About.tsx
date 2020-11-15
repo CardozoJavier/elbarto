@@ -1,4 +1,5 @@
 import parse from 'html-react-parser';
+import Image from 'next/image';
 import {
   AboutSection as Section,
   DescriptionContainer,
@@ -15,7 +16,7 @@ export interface AboutProps {
 
 const About = ({ title, description, className }: AboutProps): React.ReactElement => (
   <Section className={className}>
-    <img src="/images/profile.jpg" alt={PROFILE_IMAGE} />
+    <Image src="/images/profile.jpg" alt={PROFILE_IMAGE} width="500" height="500" />
     <DescriptionContainer>
       <Header>
         {title}
