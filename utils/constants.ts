@@ -54,12 +54,17 @@ export const SECOND_RESUME_SECTION = 'second-resume-section';
 export const CUSTOM_TITLE = 'custom-title';
 export const CUSTOM_SUBTITLE = 'custom-subtitle';
 export const CUSTOM_LIST_ITEM = 'custom-list-item';
+export const CUSTOM_PADDING = 'custom-padding';
+export const CUSTOM_PORTFOLIO_LINK = 'custom-portfolio-link';
 export const SECTION_TITLE = 'section-title';
 
 export const DOWNLOAD_RESUME = 'Download resume';
 
 export const MARGIN_20 = 'margin-20';
-export const CUSTOM_PADDING = 'custom-padding';
 
 export const ARROW_BUTTON = 'arrow-button';
 export const HIGHLIGHT = 'highlight';
+
+export const PROJECTS = 'projects';
+export const TAKE_A_LOOK = 'take a look';
+export const SECOND_PORTFOLIO_SECTION = 'second-portfolio-section';
