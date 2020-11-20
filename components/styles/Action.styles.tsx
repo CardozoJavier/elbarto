@@ -67,7 +67,8 @@ export const Button = styled.button`
   &:focus {
     outline: none;
   }
-  font-size: 1.3rem;
+  font-size: 1rem;
+  text-transform: uppercase;
   padding: 5px;
   border-radius: 3px;
   background-color: ${({ theme }) => theme.white.w08};
