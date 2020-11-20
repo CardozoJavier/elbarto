@@ -6,3 +6,4 @@ export { default as Main } from './Main';
 export { default as AboutComponent } from './About';
 export { default as Navigation } from './Navigation';
 export { default as ResumeComponent } from './Resume';
+export { default as PortfolioComponent } from './Portfolio';
