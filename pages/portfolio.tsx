@@ -4,14 +4,13 @@ import {
   PORTFOLIO,
   HREF_RESUME,
 } from '../utils/constants';
-import { App } from '../components';
+import { App, PortfolioComponent } from '../components';
 import Context from '../context';
-import WIP from '../components/WIP';
 import getAnimation from '../utils/getAnimation';
 
 const Portfolio = (props) => {
-  const { dispatch, navigation } = useContext(Context);
-  const { from } = navigation || {};
+  const { dispatch, portfolio, navigation } = useContext(Context);
+  const { from, className } = navigation || {};
 
   useEffect(() => {
     const className = getAnimation(PORTFOLIO, from);
@@ -29,7 +28,7 @@ const Portfolio = (props) => {
 
   return (
     <App {...props} active={PORTFOLIO}>
-      <WIP />
+      <PortfolioComponent {...portfolio} className={className} />
     </App>
   );
 }
