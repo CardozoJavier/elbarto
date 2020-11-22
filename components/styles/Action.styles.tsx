@@ -69,7 +69,7 @@ export const Button = styled.button`
   }
   font-size: 1rem;
   text-transform: uppercase;
-  padding: 5px;
+  padding: 10px;
   border-radius: 3px;
   background-color: ${({ theme }) => theme.white.w08};
   border: none;

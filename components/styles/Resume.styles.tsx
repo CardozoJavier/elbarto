@@ -7,7 +7,7 @@ export const ResumeSection = styled(Section)`
   @media (min-width: 768px) {
     padding: 10vh 5vw;
     flex-direction: column;
-    min-height: calc(var(--vh) - 96px);
+    min-height: calc(var(--vh) - 129px);
     justify-content: flex-start;
     margin: 0;
 
