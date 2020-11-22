@@ -1,7 +1,8 @@
 import {
   HOME,
-  RESUME,
   ABOUT,
+  RESUME,
+  PROJECT,
   PORTFOLIO,
 } from './constants';
 
@@ -20,6 +21,10 @@ const classes = new Map([
   }],
   [PORTFOLIO, {
     left: [HOME, ABOUT, RESUME],
+    right: [],
+  }],
+  [PROJECT, {
+    left: [HOME, ABOUT, RESUME, PORTFOLIO],
     right: [],
   }]
 ]);
