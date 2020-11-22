@@ -3,10 +3,10 @@ import {
   RESUME,
   PORTFOLIO,
   HREF_RESUME,
-} from '../utils/constants';
-import { App, PortfolioComponent } from '../components';
-import Context from '../context';
-import getAnimation from '../utils/getAnimation';
+} from '../../utils/constants';
+import { App, PortfolioComponent } from '../../components';
+import Context from '../../context';
+import getAnimation from '../../utils/getAnimation';
 
 const Portfolio = (props) => {
   const { dispatch, portfolio, navigation } = useContext(Context);
