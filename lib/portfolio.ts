@@ -18,6 +18,7 @@ const portfolio = {
       },
       sections: [
         {
+          id: 'client',
           title: 'What the client needed?',
           description: `A react components library that are easy to extends and re-use.<br>
           I decided to use storybook to show the progress and got feedback from the UX team.<br>
@@ -26,10 +27,15 @@ const portfolio = {
           className: '',
         },
         {
+          id: 'code',
           title: 'A bit of code',
           description: '',
           image: '/images/code-inputfield.png',
           className: CUSTOM_SECTION_1,
+          action: {
+            text: 'About the code',
+            href: '',
+          }
         }
       ]
     }
