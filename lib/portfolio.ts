@@ -22,7 +22,7 @@ const portfolio = {
           title: 'What the client needed?',
           description: `A react components library that are easy to extends and re-use.<br>
           I decided to use storybook to show the progress and got feedback from the UX team.<br>
-          On the other hand, I mainly used react and styled-components libraries. I dockerize the app to ease the deploy job to the client\'s developers.`,
+          On the other hand, I mainly used react and styled-components libraries. I packed up the code with Docker to ease the deploy job to the client\'s developers.`,
           image: '/images/calendar.png',
           className: '',
         },
