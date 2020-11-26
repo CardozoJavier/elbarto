@@ -6,6 +6,7 @@ import {
   DEFAULT_ANIMATION,
   PORTFOLIO,
   RESUME,
+  PROJECT,
 } from '../utils/constants';
 import { Action } from './index';
 
@@ -41,6 +42,11 @@ const navigationReducer = (state: NavigationProps = initialState, action: Action
         ...state,
         ...action.payload,
     };
+    case PROJECT:
+      return {
+        ...state,
+        ...action.payload,
+      };
     default:
       return { ...state };
   }

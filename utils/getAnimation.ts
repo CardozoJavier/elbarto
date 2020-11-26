@@ -8,7 +8,7 @@ import {
 const getAnimation = (active: string, fromPage: string) => {
   if (!fromPage) return DEFAULT_ANIMATION;
 
-  const { right } = classes.get(active);
+  const { right } = classes.get(active) || {};
   const className = right.includes(fromPage) ? LEFT_TO_RIGHT_ANIMATION : RIGHT_TO_LEFT_ANIMATION;
 
   return className

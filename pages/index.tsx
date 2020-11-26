@@ -24,7 +24,6 @@ const Home: React.ReactNode = (props): React.ReactNode => {
         text: ABOUT,
         href: HREF_ABOUT,
       },
-      active: HOME
     };
     dispatch({ type: HOME, payload });
   }, []);
