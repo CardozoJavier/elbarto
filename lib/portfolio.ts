@@ -26,17 +26,17 @@ const portfolio = {
           image: '/images/calendar.png',
           className: '',
         },
-        {
-          id: 'code',
-          title: 'A bit of code',
-          description: '',
-          image: '/images/code-inputfield.png',
-          className: CUSTOM_SECTION_1,
-          action: {
-            text: 'About the code',
-            href: '',
-          }
-        }
+        // {
+        //   id: 'code',
+        //   title: 'A bit of code',
+        //   description: '',
+        //   image: '/images/code-inputfield.png',
+        //   className: CUSTOM_SECTION_1,
+        //   action: {
+        //     text: 'About the code',
+        //     href: '',
+        //   }
+        // }
       ]
     }
   ]

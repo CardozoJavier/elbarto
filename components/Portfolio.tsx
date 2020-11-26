@@ -22,6 +22,7 @@ import {
 } from './styles/Portfolio.styles';
 import Action from './Action';
 import { Card } from './UI';
+import WIP from './WIP';
 
 const getTechnologies = ({ title, list }: Technologies) => (
   <>
@@ -73,6 +74,7 @@ const Portfolio = ({
           </TextContainer>
         </Card>
       ))}
+      <WIP />
     </Section>
   </>
 );

@@ -20,6 +20,7 @@ import {
   SECOND_PORTFOLIO_SECTION,
   CUSTOM_DESCRIPTION_CONTAINER,
 } from '../utils/constants';
+import WIP from './WIP';
 
 const Editor = dynamic(import('./Editor'), {
   ssr: false,
@@ -53,7 +54,8 @@ const Project = ({
         <Description>{description}</Description>
         {renderSectionAction({
           text: LETS_DEEP_DIVE,
-          href: sections ? sections[0].id : '',
+          // href: sections ? sections[0].id : '',
+          href: INFO,
           className: CUSTOM_PORTFOLIO_LINK
           }, id)
         }
