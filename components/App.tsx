@@ -23,6 +23,7 @@ const App: AppInterface = ({ children, active }: AppProps): JSX.Element => {
     <Wrapper>
       <Head>
         <link rel="shortcut icon" href="/images/favicon.png" />
+        <title>Javier Cardozo</title>
       </Head>
       <Header {...header} active={active} />
       {children}
