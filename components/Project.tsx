@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic';
 import parse from 'html-react-parser';
 import {
   Img,
@@ -19,6 +20,10 @@ import {
   SECOND_PORTFOLIO_SECTION,
   CUSTOM_DESCRIPTION_CONTAINER,
 } from '../utils/constants';
+
+const Editor = dynamic(import('./Editor'), {
+  ssr: false,
+});
 
 const renderSectionAction = ({ text, href, className }, id) => {
   const finalHref = `/portfolio/${id}/#${href}`;
@@ -48,7 +53,7 @@ const Project = ({
         <Description>{description}</Description>
         {renderSectionAction({
           text: LETS_DEEP_DIVE,
-          href: sections[0].id,
+          href: sections ? sections[0].id : '',
           className: CUSTOM_PORTFOLIO_LINK
           }, id)
         }
@@ -74,6 +79,7 @@ const Project = ({
           </div>
           <div className={`${MAX_WIDTH_50} ${section.className}`}>
             <Img src={section.image} alt="project image" className={CUSTOM_SECTION_1} />
+            {/* <Editor /> */}
           </div>
           {section.action && renderSectionAction(section.action, id)}
         </Section>

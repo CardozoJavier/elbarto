@@ -77,6 +77,11 @@ const Portfolio = ({
   </>
 );
 
+interface ActionProps {
+  text: string
+  href: string
+  className: string
+}
 interface Section {
   title: string
   description: string
@@ -84,6 +89,7 @@ interface Section {
   id?: string
   alt?: string
   className?: string
+  action?: ActionProps
 }
 
 interface Technologies {
