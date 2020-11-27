@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 import { ResumeSection } from './Resume.styles';
 import { Header } from './About.styles';
-import { CUSTOM_PROJECT_LINK, CUSTOM_PORTFOLIO_LINK, CUSTOM_DESCRIPTION_CONTAINER } from '../../utils/constants';
+import {
+  CUSTOM_PROJECT_LINK,
+  CUSTOM_PORTFOLIO_LINK,
+  CUSTOM_DESCRIPTION_CONTAINER
+} from '../../utils/constants';
 import { Img } from '../UI/styles/Img.styles';
 
 export const Container = styled.div``;
@@ -21,6 +25,7 @@ export const Description = styled.p`
     // padding: 20px;
     // border-radius: 3px;
     max-width: 75%;
+    font-size: 1.3vw;
   }
 `;
 

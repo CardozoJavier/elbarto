@@ -18,13 +18,22 @@ export const Container = styled.div``;
 export const ProjectSection = styled(ResumeSection)`
   @media (min-width: 768px) {
     &.${SECOND_PORTFOLIO_SECTION} {
+      min-height: unset;
+
       flex-direction: row;
+      justify-content: space-around;
       div.${MAX_WIDTH_50} {
         max-width: 50%;
       }
       div.${CUSTOM_SECTION_1} {
         max-width: 100%;
         background-color: #1e1e1e;
+      }
+      &.technologies {
+        flex-direction: row-reverse;
+        div > h2 {
+          margin-left: auto;
+        }
       }
     }
     &.${CUSTOM_SECTION_1} {
