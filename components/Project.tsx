@@ -54,22 +54,15 @@ const Project = ({
         <Description>{description}</Description>
         {renderSectionAction({
           text: LETS_DEEP_DIVE,
-          // href: sections ? sections[0].id : '',
-          href: INFO,
+          href: sections ? sections[0].id : '',
           className: CUSTOM_PORTFOLIO_LINK
           }, id)
         }
-        {/* <Action
-          type={LINK}
-          text={LETS_DEEP_DIVE}
-          href={`/portfolio/${id}#${sections[0].id}`}
-          className={CUSTOM_PORTFOLIO_LINK}
-        /> */}
       </DescriptionContainer>
     </Section>
     {Array.isArray(sections) &&
       sections.map(section => (
-        <Section id={INFO} className={`${SECOND_PORTFOLIO_SECTION} ${section.className}`}>
+        <Section id={section.id} className={`${SECOND_PORTFOLIO_SECTION} ${section.className}`}>
           <div>
             {section.title ? <Header>{section.title}</Header> : null}
             {section.description ?
@@ -81,7 +74,6 @@ const Project = ({
           </div>
           <div className={`${MAX_WIDTH_50} ${section.className}`}>
             <Img src={section.image} alt="project image" className={CUSTOM_SECTION_1} />
-            {/* <Editor /> */}
           </div>
           {section.action && renderSectionAction(section.action, id)}
         </Section>
