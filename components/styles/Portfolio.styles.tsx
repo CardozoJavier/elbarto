@@ -4,7 +4,8 @@ import { Header } from './About.styles';
 import {
   CUSTOM_PROJECT_LINK,
   CUSTOM_PORTFOLIO_LINK,
-  CUSTOM_DESCRIPTION_CONTAINER
+  SECOND_PORTFOLIO_SECTION,
+  CUSTOM_DESCRIPTION_CONTAINER,
 } from '../../utils/constants';
 import { Img } from '../UI/styles/Img.styles';
 
@@ -12,7 +13,20 @@ export const Container = styled.div``;
 
 export const PortfolioSection = styled(ResumeSection)`
   @media (min-width: 768px) {
-    align-items: flex-end;
+    flex-direction: row;
+    align-items: flex-start;
+    .portfolio-laptop-image {
+      margin-top: 0;
+      max-width: 45%;
+    }
+    .header-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    &.${SECOND_PORTFOLIO_SECTION} {
+      flex-direction: column;
+    }
   }
 `;
 
@@ -20,10 +34,7 @@ export const PortfolioHeader = styled(Header)``;
 
 export const Description = styled.p`
   @media (min-width: 768px) {
-    // background-color: ${({ theme }) => theme.white.w08};
     color: ${({ theme }) => theme.black.b08};
-    // padding: 20px;
-    // border-radius: 3px;
     max-width: 75%;
     font-size: 1.3vw;
   }
@@ -36,7 +47,7 @@ export const DescriptionContainer = styled.div`
     background-color: ${({ theme }) => theme.white.w08};
     padding: 20px;
     border-radius: 3px;
-    max-width: 50%;
+    max-width: 85%;
     margin: 24px 0;
     display: flex;
     align-items: center;
