@@ -19,6 +19,7 @@ import {
   CUSTOM_PORTFOLIO_LINK,
   SECOND_PORTFOLIO_SECTION,
   CUSTOM_DESCRIPTION_CONTAINER,
+  SECTION_DESCRIPTION_CONTAINER,
 } from '../utils/constants';
 import WIP from './WIP';
 
@@ -63,7 +64,7 @@ const Project = ({
     {Array.isArray(sections) &&
       sections.map(section => (
         <Section id={section.id} className={`${SECOND_PORTFOLIO_SECTION} ${section.className}`}>
-          <div>
+          <div className={`${SECTION_DESCRIPTION_CONTAINER} ${section.className}`}>
             {section.title ? <Header>{section.title}</Header> : null}
             {section.description ?
               <DescriptionContainer className={CUSTOM_DESCRIPTION_CONTAINER}>

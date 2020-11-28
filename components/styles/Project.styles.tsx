@@ -2,10 +2,15 @@ import styled from 'styled-components';
 import { ResumeSection } from './Resume.styles';
 import { Header } from './About.styles';
 import {
+  KNOWLEDGE,
+  TECHNOLOGIES,
   MAX_WIDTH_50,
+  ABOUT_PROJECT,
   CUSTOM_SECTION_1,
   CUSTOM_PROJECT_LINK,
-  SECOND_PORTFOLIO_SECTION
+  SECOND_PORTFOLIO_SECTION,
+  CUSTOM_DESCRIPTION_CONTAINER,
+  SECTION_DESCRIPTION_CONTAINER,
 } from '../../utils/constants';
 import {
   ProjectImg,
@@ -19,21 +24,42 @@ export const ProjectSection = styled(ResumeSection)`
   @media (min-width: 768px) {
     &.${SECOND_PORTFOLIO_SECTION} {
       min-height: unset;
-
       flex-direction: row;
       justify-content: space-around;
+
+      &.${ABOUT_PROJECT} {
+        div.${CUSTOM_DESCRIPTION_CONTAINER} {
+          max-width: 100%;
+        }
+      }
+      &.${TECHNOLOGIES} {
+        flex-direction: row-reverse;
+        div > h2 {
+          margin-left: auto;
+        }
+        div.${SECTION_DESCRIPTION_CONTAINER} {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+        }
+      }
+      &.${KNOWLEDGE} {
+        padding-bottom: 15vh;
+        flex-direction: column-reverse;
+        div.${KNOWLEDGE}:nth-of-type(2) {
+          margin-bottom: 150px;
+          max-width: none;
+          img {
+            max-height: unset;
+          }
+        }
+      }
       div.${MAX_WIDTH_50} {
         max-width: 50%;
       }
       div.${CUSTOM_SECTION_1} {
         max-width: 100%;
         background-color: #1e1e1e;
-      }
-      &.technologies {
-        flex-direction: row-reverse;
-        div > h2 {
-          margin-left: auto;
-        }
       }
     }
     &.${CUSTOM_SECTION_1} {
@@ -57,6 +83,10 @@ export const ProjectDescription = styled(Description)`
 
 export const DescriptionContainer = styled(PortfolioDescriptionContainer)`
   @media (min-width: 768px) {
+    max-width: 50%;
+    &.${CUSTOM_DESCRIPTION_CONTAINER} {
+      max-width: 75%;
+    }
     justify-content: flex-start;
   }
 `;
