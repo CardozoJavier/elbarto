@@ -84,6 +84,7 @@ export const CUSTOM_LIST_ITEM = 'custom-list-item';
 export const DEFAULT_ANIMATION = 'default-animation';
 export const CUSTOM_SECTION_IMG = 'custom-section-img';
 export const CUSTOM_PROJECT_LINK = 'custom-project-link';
+export const ABOUT_LANDING_PROJECT = 'about-landing-project';
 export const SECOND_RESUME_SECTION = 'second-resume-section';
 export const CUSTOM_PORTFOLIO_LINK = 'custom-portfolio-link';
 export const PORTFOLIO_LAPTOP_IMAGE = 'portfolio-laptop-image';
