@@ -2,11 +2,12 @@ import {
   KNOWLEDGE,
   TECHNOLOGIES,
   ABOUT_PROJECT,
+  ABOUT_LANDING_PROJECT,
 } from '../utils/constants';
 
 const portfolio = {
   title: 'My frontend portfolio and more',
-  description: 'Take a look to some of the projects I built for end clients or when I wanted to test others technologies.',
+  description: 'Take a look to some of the projects I built for end clients or when I tested others technologies.',
   projects: [
     {
       id: 'ui-library',
@@ -43,17 +44,47 @@ const portfolio = {
           image: '/images/preview-structure-full.png',
           className: KNOWLEDGE,
         }
-        // {
-        //   id: 'code',
-        //   title: 'A bit of code',
-        //   description: '',
-        //   image: '/images/code-inputfield.png',
-        //   className: CUSTOM_SECTION_1,
-        //   action: {
-        //     text: 'About the code',
-        //     href: '',
-        //   }
-        // }
+      ]
+    },
+    {
+      id: 'data-privacy',
+      title: 'Landing page',
+      description: 'It\'s a data privacy landing page built on react, node.js, and server side rendering.',
+      image: '/images/home-landing-desktop.png',
+      alt: 'landing-page',
+      technologies: {
+        title: 'Technologies used:',
+        list: ['React.js', 'Node.js', 'Webpack', 'Styled-components'],
+      },
+      sections: [
+        {
+          id: 'team-need',
+          title: 'What the team needed?',
+          description: 'A user friendly landing page to expose the company\'s privacy policies.',
+          image: '/images/home-landing-desktop.png',
+          className: ABOUT_LANDING_PROJECT,
+        },
+        {
+          id: 'landing-technologies',
+          title: 'What technologies I used?',
+          description: `I used the mercadolibre technology stack for build frontend web:<br>
+            - React.js<br>
+            - Node.js (SSR)<br>
+            And others like:<br>
+            - Styled-components<br>
+            - Intersection observer API
+          `,
+          image: '/images/iphone-front.png',
+          iframe: true,
+          className: 'technologies'
+        },
+        {
+          id: 'landing-knowledge',
+          title: 'What I learned?',
+          description: 'In this project I learned to use the Intersection Observer API, which allowed me to know the section into the viewport and highlight its title in the sidebar.',
+          image: '/images/section-landing-desktop.png',
+          className: 'knowledge',
+        }
       ]
     }
   ]
