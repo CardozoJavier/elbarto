@@ -22,6 +22,7 @@ import {
   SECTION_DESCRIPTION_CONTAINER,
 } from '../utils/constants';
 import WIP from './WIP';
+import PhoneIframe from './UI/PhoneIframe';
 
 const Editor = dynamic(import('./Editor'), {
   ssr: false,
@@ -73,8 +74,9 @@ const Project = ({
               : null
             }
           </div>
-          <div className={`${MAX_WIDTH_50} ${section.className}`}>
-            <Img src={section.image} alt="project image" className={CUSTOM_SECTION_1} />
+          <div id="test-id" className={`${MAX_WIDTH_50} ${section.className}`}>
+            {section.iframe && <PhoneIframe />}
+            {!section.iframe && <Img src={section.image} alt="project image" className={CUSTOM_SECTION_1} />}
           </div>
           {section.action && renderSectionAction(section.action, id)}
         </Section>
