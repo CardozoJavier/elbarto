@@ -8,6 +8,7 @@ import {
   ABOUT_PROJECT,
   CUSTOM_SECTION_1,
   CUSTOM_PROJECT_LINK,
+  ABOUT_LANDING_PROJECT,
   SECOND_PORTFOLIO_SECTION,
   CUSTOM_DESCRIPTION_CONTAINER,
   SECTION_DESCRIPTION_CONTAINER,
@@ -23,13 +24,22 @@ export const Container = styled.div``;
 export const ProjectSection = styled(ResumeSection)`
   @media (min-width: 768px) {
     &.${SECOND_PORTFOLIO_SECTION} {
+      &:last-of-type {
+        padding-bottom: 20vh;
+      }
       min-height: unset;
       flex-direction: row;
       justify-content: space-around;
 
-      &.${ABOUT_PROJECT} {
+      &.${ABOUT_PROJECT}, &.test {
         div.${CUSTOM_DESCRIPTION_CONTAINER} {
           max-width: 100%;
+        }
+      }
+      &.${ABOUT_LANDING_PROJECT} {
+        img {
+          border-radius: 3px;
+          box-shadow: 0px 0px 6px 6px rgba(0,0,0,0.1);
         }
       }
       &.${TECHNOLOGIES} {
@@ -70,7 +80,11 @@ export const ProjectSection = styled(ResumeSection)`
   }
 `;
 
-export const ProjectHeader = styled(Header)``;
+export const ProjectHeader = styled(Header)`
+  @media (min-width: 768px) {
+    max-width: 32vw;
+  }
+`;
 
 export const ProjectDescription = styled(Description)`
   background-color: unset;

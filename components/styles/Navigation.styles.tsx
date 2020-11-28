@@ -12,6 +12,7 @@ export const Container = styled.div`
   width: 100%;
   background-color: ${({ theme }) => theme.black.b08};
   box-shadow: 0px -3px 3px 3px ${({ theme }) => theme.black.b08};
+  z-index: 999;
 
 
   .only-prev {
