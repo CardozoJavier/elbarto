@@ -2,12 +2,10 @@ import {
   Title,
   Section,
   Container,
-  MainImage,
   MainStyled,
   TitleContainer,
-  ComposeContainer,
-  MainImageContainer,
 } from './styles/Main.styles';
+import { LaptopImage } from './UI';
 
 export interface MainProps {
   title: string
@@ -21,12 +19,7 @@ const Main = ({ title, className }: MainProps) => (
         <TitleContainer>
           <Title>{title}</Title>
         </TitleContainer>
-        <ComposeContainer>
-          <MainImage src="/images/laptop.png" alt="laptop-image" />
-          <MainImageContainer>
-            <MainImage src="/images/video.gif" alt="coding-gif" />
-          </MainImageContainer>
-        </ComposeContainer>
+        <LaptopImage />
       </Section>
     </MainStyled>
   </Container>
