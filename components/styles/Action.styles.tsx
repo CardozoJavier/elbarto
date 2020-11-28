@@ -43,6 +43,7 @@ export const ActionContainer = styled.div`
 `;
 
 export const ActionLink = styled.a`
+  font-size: 1vw;
   display: block;
   margin-left: auto;
   width: fit-content;
