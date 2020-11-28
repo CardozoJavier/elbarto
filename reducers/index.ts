@@ -6,12 +6,14 @@ import navigationReducer, { initialState as navigation } from './navigationReduc
 import mainReducer, { initialState as main } from './mainReducer';
 import aboutReducer, { initialState as about } from './aboutReducer';
 import resumeReducer, { initialState as resume } from './resumeReducer';
+import portfolioReducer, { initialState as portfolio } from './portfolioReducer';
 import { HeaderProps } from '../components/Header';
 import { ToggleProps } from '../components/Toggle';
 import { NavigationProps } from '../components/Navigation';
 import { MainProps } from '../components/Main';
 import { AboutProps } from '../components/About';
 import { ResumeProps } from '../components/Resume';
+import { PortfolioProps } from '../components/Portfolio';
 
 export const initialState: State = {
   main,
@@ -21,6 +23,7 @@ export const initialState: State = {
   theme,
   about,
   resume,
+  portfolio,
   dispatch: () => null,
 };
 
@@ -32,6 +35,7 @@ export interface State {
   theme: string
   about: AboutProps
   resume: ResumeProps
+  portfolio: PortfolioProps
   dispatch: Dispatch<Action>
 };
 
@@ -48,5 +52,6 @@ export const combineReducer = (state: State, action: Action): State => ({
   main: mainReducer(state.main, action),
   about: aboutReducer(state.about, action),
   resume: resumeReducer(state.resume, action),
+  portfolio: portfolioReducer(state.portfolio, action),
   dispatch: () => null,
 });

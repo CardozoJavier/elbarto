@@ -7,11 +7,11 @@ export const ResumeSection = styled(Section)`
   @media (min-width: 768px) {
     padding: 10vh 5vw;
     flex-direction: column;
-    min-height: calc(var(--vh) - 96px);
+    min-height: calc(var(--vh) - 129px);
     justify-content: flex-start;
     margin: 0;
 
-    &.second-resume-section {
+    &.second-resume-section, &.second-portfolio-section {
       background-color: white;
       min-height: var(--vh);
       ${WrapperContainer} {
@@ -26,7 +26,7 @@ export const ResumeSection = styled(Section)`
     margin-bottom: 58px;
     min-height: calc(100vh - 34px);
     justify-content: flex-start;
-    &.second-resume-section {
+    &.second-resume-section, &.second-portfolio-section {
       padding: 0;
       margin: 0;
       margin-bottom: 58px;

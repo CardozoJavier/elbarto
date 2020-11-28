@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useContext } from 'react';
 import {
   Header,
@@ -20,6 +21,10 @@ const App: AppInterface = ({ children, active }: AppProps): JSX.Element => {
 
   return (
     <Wrapper>
+      <Head>
+        <link rel="shortcut icon" href="/images/favicon.png" />
+        <title>Javier Cardozo</title>
+      </Head>
       <Header {...header} active={active} />
       {children}
       <Navigation {...navigation} />

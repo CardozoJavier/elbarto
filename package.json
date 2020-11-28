@@ -22,12 +22,14 @@
   "homepage": "https://github.com/CardozoJavier/elbarto#readme",
   "dependencies": {
     "@types/react-dom": "^16.9.8",
+    "ace-builds": "^1.4.12",
     "babel-plugin-styled-components": "^1.11.1",
     "html-react-parser": "^0.14.0",
     "lodash.debounce": "^4.0.8",
     "next": "^10.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
+    "react-ace": "^9.2.0",
     "react-dom": "^16.13.1",
     "sass": "^1.27.0",
     "styled-components": "^5.2.0"

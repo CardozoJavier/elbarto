@@ -12,6 +12,7 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #1f2021;
+  scroll-behavior: smooth;
 }
 
 body, #__next {
@@ -21,4 +22,8 @@ body, #__next {
 
 #__next-prerender-indicator {
   display: none;
+}
+
+.bold {
+  font-weight: 900;
 }
