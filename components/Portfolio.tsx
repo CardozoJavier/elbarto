@@ -5,13 +5,14 @@ import {
   LINK,
   PROJECTS,
   TAKE_A_LOOK,
+  HEADER_CONTAINER,
   CUSTOM_PROJECT_LINK,
   CUSTOM_PORTFOLIO_LINK,
+  PORTFOLIO_LAPTOP_IMAGE,
   SECOND_PORTFOLIO_SECTION,
 } from '../utils/constants';
 import {
   Description,
-  ProjectTitle,
   TextContainer,
   ProjectContainer,
   ProjectImg as Img,
@@ -21,7 +22,10 @@ import {
   PortfolioSection as Section,
 } from './styles/Portfolio.styles';
 import Action from './Action';
-import { Card } from './UI';
+import {
+  Card,
+  LaptopImage,
+} from './UI';
 import WIP from './WIP';
 
 const getTechnologies = ({ title, list }: Technologies) => (
@@ -43,16 +47,19 @@ const Portfolio = ({
 }: PortfolioProps): React.ReactElement => (
   <>
     <Section className={className}>
-      <Header>{title}</Header>
-      <DescriptionContainer>
-        <Description>{description}</Description>
-        <Action
-          text={TAKE_A_LOOK}
-          type={LINK}
-          href={`#${PROJECTS}`}
-          className={CUSTOM_PORTFOLIO_LINK}
-        />
-      </DescriptionContainer>
+      <LaptopImage className={PORTFOLIO_LAPTOP_IMAGE} />
+      <div className={HEADER_CONTAINER}>
+        <Header>{title}</Header>
+        <DescriptionContainer>
+          <Description>{description}</Description>
+          <Action
+            text={TAKE_A_LOOK}
+            type={LINK}
+            href={`#${PROJECTS}`}
+            className={CUSTOM_PORTFOLIO_LINK}
+          />
+        </DescriptionContainer>
+      </div>
     </Section>
     <Section className={SECOND_PORTFOLIO_SECTION} id={PROJECTS}>
       {projects.map(project => (

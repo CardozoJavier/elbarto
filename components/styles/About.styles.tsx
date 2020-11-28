@@ -8,7 +8,8 @@ export const AboutSection = styled(Section)`
   justify-content: flex-start;
   padding: 5vh 5vw;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: space-around;
   img {
     border-radius: 50%;
   }
@@ -24,6 +25,10 @@ export const AboutSection = styled(Section)`
 
 export const DescriptionContainer = styled.div`
   padding: 0 5vw;
+
+  @media (min-width: 768px) {
+    max-width: 70%;
+  }
 `;
 
 export const Header = styled.h2`
@@ -50,6 +55,7 @@ export const Description = styled.p`
   border-radius: 3px;
   padding: 2vh 2vw;
   font-weight: 600;
+  font-size: 1.3vw;
 
   @media (max-width: 768px) {
     font-size: 4vw;

@@ -50,7 +50,7 @@ const resume = {
           list: [
             '<a href="https://github.com/CardozoJavier/ui-toolkit" target="_blank">UI-kit</a> A UI library with several react components build on storybook.',
             '<a href="https://github.com/CardozoJavier/proximaCopa" target="_blank">Próxima copa</a> E-commerce related to selling wines and alcoholic drinks.',
-            '<a href="https://github.com/CardozoJavier/juke" target="_blank">Juke</a> It\'s a music streaming platform.',
+            '<a href="https://github.com/CardozoJavier/juke" target="_blank">Juke</a> It\'s a music streaming platform (own project).',
           ]
         }
       }
