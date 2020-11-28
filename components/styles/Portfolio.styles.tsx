@@ -2,8 +2,10 @@ import styled from 'styled-components';
 import { ResumeSection } from './Resume.styles';
 import { Header } from './About.styles';
 import {
+  HEADER_CONTAINER,
   CUSTOM_PROJECT_LINK,
   CUSTOM_PORTFOLIO_LINK,
+  PORTFOLIO_LAPTOP_IMAGE,
   SECOND_PORTFOLIO_SECTION,
   CUSTOM_DESCRIPTION_CONTAINER,
 } from '../../utils/constants';
@@ -15,11 +17,11 @@ export const PortfolioSection = styled(ResumeSection)`
   @media (min-width: 768px) {
     flex-direction: row;
     align-items: flex-start;
-    .portfolio-laptop-image {
+    .${PORTFOLIO_LAPTOP_IMAGE} {
       margin-top: 0;
       max-width: 45%;
     }
-    .header-container {
+    .${HEADER_CONTAINER} {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
