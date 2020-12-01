@@ -3,15 +3,16 @@ import { Img } from './Img.styles';
 
 export const Container = styled.div`
   position: relative;
+  height: 648px;
+  width: 380px;
+  margin: 50px;
   .iframe-container {
     border: none;
     min-width: unset;
-    // height: 710px;
-    // width: 343px;
-    width: 20vw;
-    height: 70vh;
+    width: 320px;
+    height: 568px;
     position: absolute;
-    left: 35px;
+    left: 28px;
     z-index: 0;
     top: 60px;
   }
@@ -20,25 +21,24 @@ export const Container = styled.div`
     z-index: 1;
     pointer-events: none;
     position: absolute;
-    // height: 736px;
-    // width: 414px;
-    width: 25vw;
-    height: 80vh;
+    width: 380px;
+    height: 648px;
     left: 0;
   }
 
   .notch {
     position: absolute;
-    width: 347px;
-    height: 28px;
+    width: 318px;
+    height: 45px;
     background: white;
-    left: 33px;
-    top: 30px;
+    left: 30px;
+    top: 22px;
     border-radius: 35px 35px 0 0;
     padding: 10px 0 0 28px;
     p {
       margin: 0;
       font-weight: 900;
+      font-size: 14px;
       width: fit-content;
     }
   }
