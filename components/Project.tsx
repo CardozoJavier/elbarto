@@ -16,6 +16,7 @@ import {
   MAX_WIDTH_50,
   LETS_DEEP_DIVE,
   CUSTOM_SECTION_1,
+  SECOND_SECTION_HEADER,
   CUSTOM_PORTFOLIO_LINK,
   SECOND_PORTFOLIO_SECTION,
   CUSTOM_DESCRIPTION_CONTAINER,
@@ -66,7 +67,7 @@ const Project = ({
       sections.map(section => (
         <Section id={section.id} className={`${SECOND_PORTFOLIO_SECTION} ${section.className}`}>
           <div className={`${SECTION_DESCRIPTION_CONTAINER} ${section.className}`}>
-            {section.title ? <Header>{section.title}</Header> : null}
+            {section.title ? <Header className={SECOND_SECTION_HEADER}>{section.title}</Header> : null}
             {section.description ?
               <DescriptionContainer className={CUSTOM_DESCRIPTION_CONTAINER}>
                 <Description>{parse(section.description)}</Description>
