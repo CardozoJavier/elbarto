@@ -76,12 +76,12 @@ const portfolio = {
           `,
           image: '/images/iphone-front.png',
           iframe: true,
-          className: 'technologies'
+          className: 'landing-technologies'
         },
         {
           id: 'landing-knowledge',
           title: 'What I learned?',
-          description: 'In this project I learned to use the Intersection Observer API, which allowed me to know the section into the viewport and highlight its title in the sidebar.',
+          description: 'In this project I learned to use the Intersection Observer API, which allowed me to know the page section into the viewport and let bold its title in the sidebar.',
           image: '/images/section-landing-desktop.png',
           className: 'knowledge',
         }
