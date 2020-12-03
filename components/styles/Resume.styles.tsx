@@ -4,6 +4,19 @@ import { Header } from './About.styles';
 import { WrapperContainer } from './Wrapper.styles';
 
 export const ResumeSection = styled(Section)`
+  @media (max-width: 767px) {
+    margin: 33px 20px 58px 20px;
+    align-items: flex-start;
+    margin-bottom: 58px;
+    min-height: calc(100vh - 34px);
+    justify-content: flex-start;
+    &.second-resume-section {
+      padding: 0;
+      margin: 0;
+      margin-bottom: 58px;
+      background-color: white;
+    }
+  } 
   @media (min-width: 768px) {
     padding: 10vh 5vw;
     flex-direction: column;
@@ -19,20 +32,6 @@ export const ResumeSection = styled(Section)`
       }
     }
   }
-
-  @media (max-width: 768px) {
-    margin: 33px 20px 58px 20px;
-    align-items: flex-start;
-    margin-bottom: 58px;
-    min-height: calc(100vh - 34px);
-    justify-content: flex-start;
-    &.second-resume-section, &.second-portfolio-section {
-      padding: 0;
-      margin: 0;
-      margin-bottom: 58px;
-      background-color: white;
-    }
-  } 
 `;
 
 export const ResumeHeader = styled(Header)`
@@ -40,7 +39,7 @@ export const ResumeHeader = styled(Header)`
     font-size: 7vw;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     max-width: unset;
     font-size: 10vw;
     width: 100%;
@@ -60,7 +59,7 @@ export const Title = styled.h3`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     &.section-title {
       font-size: 1.5rem;
     }
@@ -78,7 +77,7 @@ export const Subtitle = styled.p`
     text-transform: none;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     span.divisor {
       display: none;
     }
@@ -96,7 +95,7 @@ export const Ul = styled.ul`
     min-width: 33%;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     padding: 0;
   }
 `;
@@ -118,7 +117,7 @@ export const Li = styled.li`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     span.course-year, span.divisor {
       display: none;
     }
@@ -141,7 +140,7 @@ export const RowContainer = styled.div`
       cursor: pointer;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     ${Ul} {
       padding: 0 20px;
     }
@@ -162,7 +161,7 @@ export const SubSection = styled.div`
     font-weight: 900;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     display: flex;
     flex-direction: column;
     margin: 5vh 0;
@@ -187,7 +186,7 @@ export const TitleContainer = styled.div`
     border-radius: 3px;
     padding: 5px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     border-radius: 0;
     padding: 10px 20px;
   }

@@ -66,7 +66,7 @@ export const Container = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     padding: 0 10px;
     position: fixed;
     bottom: 0;

@@ -42,6 +42,9 @@ export const Container = styled.div`
       width: fit-content;
     }
   }
+  @media (max-width: 767px) {
+    display: none;
+  }
 `;
 
 export const Image = styled(Img)`

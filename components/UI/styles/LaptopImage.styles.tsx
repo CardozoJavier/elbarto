@@ -8,7 +8,7 @@ export const ComposeContainer = styled.div`
   margin-top: 9vw;
   height: fit-content;
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     max-width: 90%;
   }
 `;

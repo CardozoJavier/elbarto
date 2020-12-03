@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ActionContainer = styled.div`
   align-self: flex-end;
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     &.custom-button {
       margin-left: auto;
       a {
@@ -59,7 +59,7 @@ export const ActionLink = styled.a`
     color: ${({ theme }) => theme.orange.o40};
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     padding: 20px 0;
     font-size: 4vw;
   }

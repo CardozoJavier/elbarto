@@ -68,7 +68,7 @@ export const Section = styled.section`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     flex-direction: column;
     align-items: center;
     padding-top: 5vh;
@@ -80,7 +80,7 @@ export const TitleContainer = styled.div`
   display: flex;
   max-width: 50vw;
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     max-width: unset;
   }
 `;
@@ -91,7 +91,7 @@ export  const Title = styled.h1`
   color: ${({ theme }) => theme.white.w08};
   margin: 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     font-size: 15vw;
   }
 `;
