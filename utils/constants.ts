@@ -18,12 +18,12 @@ export const DESKTOP = 'desktop';
 /**
  * Link pages
  */
+export const INFO = 'info';
 export const HREF_HOME = '/';
 export const HREF_ABOUT = '/about';
 export const HREF_RESUME = '/resume';
 export const HREF_CONTACT = '/contact';
 export const HREF_PORTFOLIO = '/portfolio';
-export const INFO = 'info';
 
 /**
  * State actions
@@ -64,6 +64,7 @@ export const BOLD = 'bold';
 export const LOUD = 'loud';
 export const GHOST = 'ghost';
 export const IMAGE = 'image';
+export const NOTCH = 'notch';
 export const HIGHLIGHT = 'highlight';
 export const MARGIN_20 = 'margin-20';
 export const KNOWLEDGE = 'knowledge';
@@ -78,6 +79,8 @@ export const ABOUT_PROJECT = 'about-project';
 export const SECTION_TITLE = 'section-title';
 export const CUSTOM_PADDING = 'custom-padding';
 export const CUSTOM_SUBTITLE = 'custom-subtitle';
+export const IMAGE_CONTAINER = 'image-container';
+export const IFRAME_CONTAINER = 'iframe-container';
 export const CUSTOM_SECTION_1 = 'custom-section-1';
 export const HEADER_CONTAINER = 'header-container';
 export const CUSTOM_LIST_ITEM = 'custom-list-item';
