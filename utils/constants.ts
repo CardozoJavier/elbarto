@@ -77,6 +77,7 @@ export const ARROW_BUTTON = 'arrow-button';
 export const BUTTON_SOLID = 'button-solid';
 export const ABOUT_PROJECT = 'about-project';
 export const SECTION_TITLE = 'section-title';
+export const PORTFOLIO_CARD = 'portfolio-card';
 export const CUSTOM_PADDING = 'custom-padding';
 export const CUSTOM_SUBTITLE = 'custom-subtitle';
 export const IMAGE_CONTAINER = 'image-container';
