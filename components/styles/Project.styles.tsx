@@ -7,7 +7,9 @@ import {
   MAX_WIDTH_50,
   ABOUT_PROJECT,
   CUSTOM_SECTION_1,
+  LANDING_KNOWLEDGE,
   CUSTOM_PROJECT_LINK,
+  LANDING_TECHNOLOGIES,
   ABOUT_LANDING_PROJECT,
   SECOND_SECTION_HEADER,
   SECOND_PORTFOLIO_SECTION,
@@ -23,6 +25,17 @@ import {
 export const Container = styled.div``;
 
 export const ProjectSection = styled(ResumeSection)`
+  @media (max-width: 767px) {
+    &.${SECOND_PORTFOLIO_SECTION} {
+      margin-bottom: 0;
+      margin: 0;
+      background-color: white;
+      min-height: unset;
+      &:last-of-type {
+        padding-bottom: 15vh;
+      }
+    }
+  }
   @media (min-width: 768px) {
     &.${SECOND_PORTFOLIO_SECTION} {
       .${ABOUT_LANDING_PROJECT} {
@@ -73,15 +86,18 @@ export const ProjectSection = styled(ResumeSection)`
           align-items: flex-end;
         }
       }
-      &.${KNOWLEDGE} {
+      &.${KNOWLEDGE}, &.${LANDING_KNOWLEDGE} {
         padding-bottom: 15vh;
         flex-direction: column-reverse;
-        div.${KNOWLEDGE}:nth-of-type(2) {
-          margin-bottom: 150px;
+        div.${KNOWLEDGE}:nth-of-type(2), div.${LANDING_KNOWLEDGE}:nth-of-type(2) {
+          margin: 0 auto;
           max-width: none;
           img {
             max-height: unset;
           }
+        }
+        div.${LANDING_KNOWLEDGE}:nth-of-type(2) {
+          margin-bottom: 100px;
         }
       }
       div.${MAX_WIDTH_50} {
@@ -171,6 +187,9 @@ export const Img = styled(ProjectImg)`
       &:hover {
         cursor: default;
       }
+    }
+    &.${LANDING_TECHNOLOGIES} {
+      display: none;
     }
   }
 `;

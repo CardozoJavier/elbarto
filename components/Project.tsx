@@ -71,7 +71,12 @@ const Project = ({
           </div>
           <div className={`${MAX_WIDTH_50} ${section.className}`}>
             {section.iframe && <PhoneIframe src={section.iframe.src} />}
-            {section.image && <Img src={section.image} alt="project image" className={CUSTOM_SECTION_1} />}
+            {section.image &&
+              <Img
+                src={section.image}
+                alt="project image"
+                className={`${CUSTOM_SECTION_1} ${section.className}`}
+              />}
           </div>
           {section.action && renderSectionAction(section.action, id)}
         </Section>
