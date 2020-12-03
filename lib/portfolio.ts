@@ -3,7 +3,11 @@ import {
   TECHNOLOGIES,
   ABOUT_PROJECT,
   ABOUT_LANDING_PROJECT,
+  LANDING_KNOWLEDGE,
 } from '../utils/constants';
+import getDeviceType from '../utils/getDeviceType';
+
+const device = getDeviceType();
 
 const portfolio = {
   title: 'My frontend portfolio and more',
@@ -24,7 +28,7 @@ const portfolio = {
           id: 'client',
           title: 'What the client needed?',
           description: 'A react components library that are easy to extends and re-use.', 
-          image: '/images/calendar.png',
+          image: `/images/jampp-${device}.svg`,
           className: ABOUT_PROJECT,
         },
         {
@@ -32,7 +36,7 @@ const portfolio = {
           title: 'What technologies I used?',
           description: `I decided to use storybook to show the progress and got feedback from the UX team.<br>
           On the other hand, I mainly used react and styled-components libraries. I packed up the code with Docker to ease the deploy job to the client\'s developers.`,
-          image: '/images/dropdown.svg',
+          image: `/images/dropdown-${device}.svg`,
           className: TECHNOLOGIES,
         },
         {
@@ -41,7 +45,7 @@ const portfolio = {
           description: `I learned a little bit more about storybook and his powerful API.<br>
             I had to solve a complex state management between the components, and with that I understood the pros about redux even though I used react Context because the project size it wasn't so large.
           `,
-          image: '/images/preview-structure-full.png',
+          image: `/images/jampp2-${device}.svg`,
           className: KNOWLEDGE,
         }
       ]
@@ -61,7 +65,7 @@ const portfolio = {
           id: 'team-need',
           title: 'What the team needed?',
           description: 'A user friendly landing page to expose the company\'s privacy policies.',
-          image: '/images/home-landing-desktop.png',
+          image: `/images/home-landing-${device}.png`,
           className: ABOUT_LANDING_PROJECT,
         },
         {
@@ -74,6 +78,7 @@ const portfolio = {
             - Styled-components<br>
             - Intersection observer API
           `,
+          image: '/images/tooltip-landing-mobile.png',
           iframe: {
             src: 'https://www.mercadolibre.com.ar/privacidad',
           },
@@ -83,8 +88,8 @@ const portfolio = {
           id: 'landing-knowledge',
           title: 'What I learned?',
           description: 'In this project I learned to use the Intersection Observer API, which allowed me to know the page section into the viewport and let bold its title in the sidebar.',
-          image: '/images/section-landing-desktop.png',
-          className: 'knowledge',
+          image: `/images/section-landing-${device}.png`,
+          className: LANDING_KNOWLEDGE,
         }
       ]
     }
