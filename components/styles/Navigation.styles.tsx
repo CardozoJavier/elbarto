@@ -12,6 +12,7 @@ export const Container = styled.div`
   width: 100%;
   background-color: ${({ theme }) => theme.black.b08};
   box-shadow: 0px -3px 3px 3px ${({ theme }) => theme.black.b08};
+  z-index: 999;
 
 
   .only-prev {
@@ -65,7 +66,7 @@ export const Container = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     padding: 0 10px;
     position: fixed;
     bottom: 0;

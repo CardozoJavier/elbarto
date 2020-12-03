@@ -14,7 +14,7 @@ export const AboutSection = styled(Section)`
     border-radius: 50%;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     padding: 5vh 0 0 0;
     img {
       height: 50vw;
@@ -40,7 +40,7 @@ export const Header = styled.h2`
   background-color: ${({ theme }) => theme.black.b05};
   margin: 0;
   
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     font-size: 6vw;
     max-width: 75%;
     margin-top: 10%;
@@ -57,7 +57,7 @@ export const Description = styled.p`
   font-weight: 600;
   font-size: 1.3vw;
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     font-size: 4vw;
   }
 `;

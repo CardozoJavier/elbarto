@@ -5,7 +5,7 @@ export const WrapperContainer = styled.div`
   flex-direction: column;
   transition: background-color .5s;
   
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     height: unset;
   }
 `;

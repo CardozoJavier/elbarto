@@ -9,7 +9,7 @@ export const Container = styled.header`
     margin: 33px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     position: fixed;
     width: 100%;
     background-color: #e5e5e5;

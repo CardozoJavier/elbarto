@@ -18,12 +18,12 @@ export const DESKTOP = 'desktop';
 /**
  * Link pages
  */
+export const INFO = 'info';
 export const HREF_HOME = '/';
 export const HREF_ABOUT = '/about';
 export const HREF_RESUME = '/resume';
 export const HREF_CONTACT = '/contact';
 export const HREF_PORTFOLIO = '/portfolio';
-export const INFO = 'info';
 
 /**
  * State actions
@@ -64,6 +64,7 @@ export const BOLD = 'bold';
 export const LOUD = 'loud';
 export const GHOST = 'ghost';
 export const IMAGE = 'image';
+export const NOTCH = 'notch';
 export const HIGHLIGHT = 'highlight';
 export const MARGIN_20 = 'margin-20';
 export const KNOWLEDGE = 'knowledge';
@@ -76,14 +77,21 @@ export const ARROW_BUTTON = 'arrow-button';
 export const BUTTON_SOLID = 'button-solid';
 export const ABOUT_PROJECT = 'about-project';
 export const SECTION_TITLE = 'section-title';
+export const PORTFOLIO_CARD = 'portfolio-card';
 export const CUSTOM_PADDING = 'custom-padding';
 export const CUSTOM_SUBTITLE = 'custom-subtitle';
+export const IMAGE_CONTAINER = 'image-container';
+export const IFRAME_CONTAINER = 'iframe-container';
 export const CUSTOM_SECTION_1 = 'custom-section-1';
 export const HEADER_CONTAINER = 'header-container';
 export const CUSTOM_LIST_ITEM = 'custom-list-item';
+export const LANDING_KNOWLEDGE = 'landing-knowledge';
 export const DEFAULT_ANIMATION = 'default-animation';
 export const CUSTOM_SECTION_IMG = 'custom-section-img';
 export const CUSTOM_PROJECT_LINK = 'custom-project-link';
+export const LANDING_TECHNOLOGIES = 'landing-technologies';
+export const SECOND_SECTION_HEADER = 'second-section-header';
+export const ABOUT_LANDING_PROJECT = 'about-landing-project';
 export const SECOND_RESUME_SECTION = 'second-resume-section';
 export const CUSTOM_PORTFOLIO_LINK = 'custom-portfolio-link';
 export const PORTFOLIO_LAPTOP_IMAGE = 'portfolio-laptop-image';

@@ -7,7 +7,11 @@ import {
   MAX_WIDTH_50,
   ABOUT_PROJECT,
   CUSTOM_SECTION_1,
+  LANDING_KNOWLEDGE,
   CUSTOM_PROJECT_LINK,
+  LANDING_TECHNOLOGIES,
+  ABOUT_LANDING_PROJECT,
+  SECOND_SECTION_HEADER,
   SECOND_PORTFOLIO_SECTION,
   CUSTOM_DESCRIPTION_CONTAINER,
   SECTION_DESCRIPTION_CONTAINER,
@@ -21,8 +25,47 @@ import {
 export const Container = styled.div``;
 
 export const ProjectSection = styled(ResumeSection)`
+  @media (max-width: 767px) {
+    &.${SECOND_PORTFOLIO_SECTION} {
+      margin-bottom: 0;
+      margin: 0;
+      background-color: white;
+      min-height: unset;
+      &:last-of-type {
+        padding-bottom: 15vh;
+      }
+    }
+  }
   @media (min-width: 768px) {
     &.${SECOND_PORTFOLIO_SECTION} {
+      .${ABOUT_LANDING_PROJECT} {
+        img {
+          border-radius: 3px;
+          box-shadow: 0px 0px 6px 6px rgba(0,0,0,0.1);
+        }
+      }
+      div.${SECTION_DESCRIPTION_CONTAINER} {
+        margin: 25px 0;
+      }
+      &:last-of-type {
+        padding-bottom: 20vh;
+      }
+    }
+  }
+  @media (max-width: 1199px) {
+    &.${SECOND_PORTFOLIO_SECTION} {
+      padding: 5vh 5vw;
+      div.landing-technologies:nth-of-type(2) {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    &.${SECOND_PORTFOLIO_SECTION} {
+      &:last-of-type {
+        padding-bottom: 20vh;
+      }
       min-height: unset;
       flex-direction: row;
       justify-content: space-around;
@@ -32,7 +75,7 @@ export const ProjectSection = styled(ResumeSection)`
           max-width: 100%;
         }
       }
-      &.${TECHNOLOGIES} {
+      &.${TECHNOLOGIES}, &.landing-technologies {
         flex-direction: row-reverse;
         div > h2 {
           margin-left: auto;
@@ -43,15 +86,18 @@ export const ProjectSection = styled(ResumeSection)`
           align-items: flex-end;
         }
       }
-      &.${KNOWLEDGE} {
+      &.${KNOWLEDGE}, &.${LANDING_KNOWLEDGE} {
         padding-bottom: 15vh;
         flex-direction: column-reverse;
-        div.${KNOWLEDGE}:nth-of-type(2) {
-          margin-bottom: 150px;
+        div.${KNOWLEDGE}:nth-of-type(2), div.${LANDING_KNOWLEDGE}:nth-of-type(2) {
+          margin: 0 auto;
           max-width: none;
           img {
             max-height: unset;
           }
+        }
+        div.${LANDING_KNOWLEDGE}:nth-of-type(2) {
+          margin-bottom: 100px;
         }
       }
       div.${MAX_WIDTH_50} {
@@ -60,6 +106,9 @@ export const ProjectSection = styled(ResumeSection)`
       div.${CUSTOM_SECTION_1} {
         max-width: 100%;
         background-color: #1e1e1e;
+      }
+      &.about-landing-project {
+       justify-content: space-between; 
       }
     }
     &.${CUSTOM_SECTION_1} {
@@ -70,7 +119,13 @@ export const ProjectSection = styled(ResumeSection)`
   }
 `;
 
-export const ProjectHeader = styled(Header)``;
+export const ProjectHeader = styled(Header)`
+  @media (max-width: 1199px) {
+    &.${SECOND_SECTION_HEADER} {
+      max-width: unset;
+    }
+  }
+`;
 
 export const ProjectDescription = styled(Description)`
   background-color: unset;
@@ -79,13 +134,16 @@ export const ProjectDescription = styled(Description)`
   max-width: unset;
   display: inline;
   margin: 0;
+  @media (max-width: 1199px) {
+    max-width: unset;
+  }
 `;
 
 export const DescriptionContainer = styled(PortfolioDescriptionContainer)`
   @media (min-width: 768px) {
     max-width: 50%;
     &.${CUSTOM_DESCRIPTION_CONTAINER} {
-      max-width: 75%;
+      max-width: 42vw;
     }
     justify-content: flex-start;
   }
@@ -129,6 +187,9 @@ export const Img = styled(ProjectImg)`
       &:hover {
         cursor: default;
       }
+    }
+    &.${LANDING_TECHNOLOGIES} {
+      display: none;
     }
   }
 `;
