@@ -104,7 +104,7 @@ interface Section {
   alt?: string
   className?: string
   action?: ActionProps
-  iframe: Iframe
+  iframe?: Iframe
 }
 
 interface Technologies {
