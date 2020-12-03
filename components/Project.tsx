@@ -11,7 +11,6 @@ import {
 import { Project as ProjectProps } from './Portfolio';
 import Action from './Action';
 import {
-  INFO,
   LINK,
   MAX_WIDTH_50,
   LETS_DEEP_DIVE,
@@ -22,12 +21,7 @@ import {
   CUSTOM_DESCRIPTION_CONTAINER,
   SECTION_DESCRIPTION_CONTAINER,
 } from '../utils/constants';
-import WIP from './WIP';
 import PhoneIframe from './UI/PhoneIframe';
-
-const Editor = dynamic(import('./Editor'), {
-  ssr: false,
-});
 
 const renderSectionAction = ({ text, href, className }, id) => {
   const finalHref = `/portfolio/${id}/#${href}`;
@@ -75,9 +69,9 @@ const Project = ({
               : null
             }
           </div>
-          <div id="test-id" className={`${MAX_WIDTH_50} ${section.className}`}>
-            {section.iframe && <PhoneIframe />}
-            {!section.iframe && <Img src={section.image} alt="project image" className={CUSTOM_SECTION_1} />}
+          <div className={`${MAX_WIDTH_50} ${section.className}`}>
+            {section.iframe && <PhoneIframe src={section.iframe.src} />}
+            {section.image && <Img src={section.image} alt="project image" className={CUSTOM_SECTION_1} />}
           </div>
           {section.action && renderSectionAction(section.action, id)}
         </Section>

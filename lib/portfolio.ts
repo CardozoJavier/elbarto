@@ -74,8 +74,9 @@ const portfolio = {
             - Styled-components<br>
             - Intersection observer API
           `,
-          image: '/images/iphone-front.png',
-          iframe: true,
+          iframe: {
+            src: 'https://www.mercadolibre.com.ar/privacidad',
+          },
           className: 'landing-technologies'
         },
         {

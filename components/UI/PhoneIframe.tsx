@@ -4,9 +4,14 @@ import {
   Iframe,
   Image,
 } from './styles/PhoneIframe.styles';
+import {
+  NOTCH,
+  IMAGE_CONTAINER,
+  IFRAME_CONTAINER,
+} from '../../utils/constants';
 
 
-const PhoneIframe = () => {  
+const PhoneIframe = ({ src }: { src: string }): React.ReactElement => {  
   const getTime = useCallback((): string => {
     const date = new Date();
     const time = date.toLocaleTimeString();
@@ -26,17 +31,16 @@ const PhoneIframe = () => {
 
   return (
     <Container>
-      <div className="notch">
+      <div className={NOTCH}>
         <p>{time}</p>
       </div>
-      <div className="iframe-container">
+      <div className={IFRAME_CONTAINER}>
         <Iframe
-          id="inlineFrameExample"
           title="Inline Frame Example"
-          src="https://www.mercadolibre.com.ar/privacidad"
+          src={src}
         />
       </div>
-      <div className="image-container">
+      <div className={IMAGE_CONTAINER}>
         <Image src="/images/iphone-front.png" alt="iphone-front" />
       </div>
     </Container>

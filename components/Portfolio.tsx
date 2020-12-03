@@ -91,6 +91,10 @@ interface ActionProps {
   href: string
   className: string
 }
+
+interface Iframe {
+  src: string
+}
 interface Section {
   title: string
   description: string
@@ -99,6 +103,7 @@ interface Section {
   alt?: string
   className?: string
   action?: ActionProps
+  iframe: Iframe
 }
 
 interface Technologies {
