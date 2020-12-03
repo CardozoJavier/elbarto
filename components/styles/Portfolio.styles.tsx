@@ -10,6 +10,7 @@ import {
   CUSTOM_DESCRIPTION_CONTAINER,
 } from '../../utils/constants';
 import { Img } from '../UI/styles/Img.styles';
+import { ActionLink } from './Action.styles';
 
 export const Container = styled.div``;
 
@@ -43,14 +44,31 @@ export const Description = styled.p`
 `;
 
 export const DescriptionContainer = styled.div`
+  background-color: ${({ theme }) => theme.white.w08};
+  border-radius: 3px;
+  margin: 24px 0;
+  
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 20vh;
+    padding: 2vw;
+    .${CUSTOM_PORTFOLIO_LINK} {
+      margin: 0 0 25px 0;
+      align-self: unset;
+      ${ActionLink} {
+        padding: 0;
+        margin-left: 0;
+        color: ${({ theme }) => theme.orange.o40};
+      }
+    }
+  }  
   @media (min-width: 768px) {
     display: flex;
-    align-items: center;
-    background-color: ${({ theme }) => theme.white.w08};
     padding: 20px;
-    border-radius: 3px;
+    align-items: center;
     max-width: 85%;
-    margin: 24px 0;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -58,16 +76,15 @@ export const DescriptionContainer = styled.div`
     .${CUSTOM_PORTFOLIO_LINK} {
       margin-left: 16px;
       align-self: unset;
-      a {
+      ${ActionLink} {
         padding: 0;
         color: ${({ theme }) => theme.orange.o40};
       }
     }
-
-    &.${CUSTOM_DESCRIPTION_CONTAINER} {
-      max-width: unset;
-      background-color: ${({ theme }) => theme.black.b01};
-    }
+  }
+  &.${CUSTOM_DESCRIPTION_CONTAINER} {
+    max-width: unset;
+    background-color: ${({ theme }) => theme.black.b01};
   }
 `;
 
@@ -108,5 +125,8 @@ export const ProjectContainer = styled.div`
 export const ProjectImg = styled(Img)`
   &:hover {
     cursor: pointer;
+  }
+  @media (max-width: 767px) {
+    max-width: 100%;
   }
 `;

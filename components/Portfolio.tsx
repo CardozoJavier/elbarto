@@ -5,6 +5,7 @@ import {
   LINK,
   PROJECTS,
   TAKE_A_LOOK,
+  PORTFOLIO_CARD,
   HEADER_CONTAINER,
   CUSTOM_PROJECT_LINK,
   CUSTOM_PORTFOLIO_LINK,
@@ -63,7 +64,7 @@ const Portfolio = ({
     </Section>
     <Section className={SECOND_PORTFOLIO_SECTION} id={PROJECTS}>
       {projects.map(project => (
-        <Card>
+        <Card className={PORTFOLIO_CARD}>
           <TextContainer>
             <ProjectContainer>
               <Action
@@ -91,6 +92,10 @@ interface ActionProps {
   href: string
   className: string
 }
+
+interface Iframe {
+  src: string
+}
 interface Section {
   title: string
   description: string
@@ -99,6 +104,7 @@ interface Section {
   alt?: string
   className?: string
   action?: ActionProps
+  iframe?: Iframe
 }
 
 interface Technologies {
