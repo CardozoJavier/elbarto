@@ -10,6 +10,7 @@ export const ComposeContainer = styled.div`
 
   @media (max-width: 767px) {
     max-width: 90%;
+    margin: 9vw auto 0 auto;
   }
 `;
 
