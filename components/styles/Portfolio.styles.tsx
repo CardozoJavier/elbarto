@@ -132,11 +132,13 @@ export const ProjectContainer = styled.div`
 `;
 
 export const ProjectImg = styled(Img)`
-  max-width: 100%;
   @media (max-width: 767px) {
+    margin: 0 auto;
     margin-bottom: 20px;
+    max-width: 100%;
   }
   @media (min-width: 768px) {
+    max-width: 50%;
     max-height: 215px;
   }
   &:hover {
