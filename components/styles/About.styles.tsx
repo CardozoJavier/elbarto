@@ -1,8 +1,5 @@
 import styled from 'styled-components';
-import media from '../../utils/media'
-import {
-  Section
-} from './Main.styles';
+import { Section } from './Main.styles';
 
 export const AboutSection = styled(Section)`
   justify-content: flex-start;
@@ -20,6 +17,7 @@ export const AboutSection = styled(Section)`
       height: 50vw;
       width: 50vw;
     }
+    align-items: center;
   }
 `;
 
