@@ -34,7 +34,7 @@ const resume = {
     row: [
       {
         title: 'Front-end developer',
-        subtitle: '<a href="https://www.mercadolibre.com" target="_blank">MercadoLibre</a> <span class="divisor">|</span> Buenos Aires, Argentina <span class="divisor">-</span> <span class="block">February 2019 - Present</span>',
+        subtitle: '<a href="http://investor.mercadolibre.com/" target="_blank">MercadoLibre</a> <span class="divisor">|</span> Buenos Aires, Argentina <span class="divisor">-</span> <span class="block">February 2019 - Present</span>',
         description: [
           'Added and tested UI features to asset management section in Mercadopago.',
           'Built from scratch the <a href="https://www.mercadolibre.com.ar/privacidad" target="_blank">data privacy landing page</a>.',

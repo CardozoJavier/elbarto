@@ -15,10 +15,12 @@ import {
   SECOND_PORTFOLIO_SECTION,
   CUSTOM_DESCRIPTION_CONTAINER,
   SECTION_DESCRIPTION_CONTAINER,
+  LANDING_TECHNOLOGIES_ACCESSORY,
 } from '../../utils/constants';
 import {
   ProjectImg,
   Description,
+  ProjectContainer as PortfolioProjectContainer,
   DescriptionContainer as PortfolioDescriptionContainer
 } from './Portfolio.styles';
 
@@ -38,7 +40,7 @@ export const ProjectSection = styled(ResumeSection)`
   }
   @media (min-width: 768px) {
     &.${SECOND_PORTFOLIO_SECTION} {
-      .${ABOUT_LANDING_PROJECT} {
+      .${ABOUT_LANDING_PROJECT}, .${LANDING_KNOWLEDGE} {
         img {
           border-radius: 3px;
           box-shadow: 0px 0px 6px 6px rgba(0,0,0,0.1);
@@ -75,7 +77,7 @@ export const ProjectSection = styled(ResumeSection)`
           max-width: 100%;
         }
       }
-      &.${TECHNOLOGIES}, &.landing-technologies {
+      &.${TECHNOLOGIES}, &.${LANDING_TECHNOLOGIES} {
         flex-direction: row-reverse;
         div > h2 {
           margin-left: auto;
@@ -107,7 +109,7 @@ export const ProjectSection = styled(ResumeSection)`
         max-width: 100%;
         background-color: #1e1e1e;
       }
-      &.about-landing-project {
+      &.${ABOUT_LANDING_PROJECT} {
        justify-content: space-between; 
       }
     }
@@ -162,24 +164,14 @@ export const ProjectTitle = styled.p`
   font-weight: 900;
 `;
 
-export const ProjectContainer = styled.div`
-  @media (min-width: 768px) {
-    .${CUSTOM_PROJECT_LINK} {
-      a {
-        font-weight: 900;
-        font-size: 22px;
-        margin: 16px 0;
-        padding: 0;
-        color: ${({ theme }) => theme.orange.o40};
-        &:hover {
-          color: ${({ theme }) => theme.orange.o50};
-        }
-      }
-    }
-  }
-`;
+export const ProjectContainer = styled(PortfolioProjectContainer)``;
 
 export const Img = styled(ProjectImg)`
+  @media (max-width: 767px) {
+    &.${LANDING_TECHNOLOGIES_ACCESSORY} {
+      display: none;
+    }
+  }
   @media (min-width: 768px) {
     max-width: 100%;
     &.${CUSTOM_SECTION_1} {
@@ -190,6 +182,13 @@ export const Img = styled(ProjectImg)`
     }
     &.${LANDING_TECHNOLOGIES} {
       display: none;
+    }
+    &.${LANDING_TECHNOLOGIES_ACCESSORY} {
+      position: relative;
+      top: 35px;
+      right: 45px;
+      transform: rotate(45deg);
+      height: 100px;
     }
   }
 `;

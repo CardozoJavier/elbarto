@@ -100,3 +100,4 @@ export const RIGHT_TO_LEFT_ANIMATION = 'right-to-left-animation';
 export const SECOND_PORTFOLIO_SECTION = 'second-portfolio-section';
 export const CUSTOM_DESCRIPTION_CONTAINER = 'custom-description-container';
 export const SECTION_DESCRIPTION_CONTAINER = 'section-description-container';
+export const LANDING_TECHNOLOGIES_ACCESSORY = 'landing-technologies-accessory';

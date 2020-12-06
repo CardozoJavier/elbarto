@@ -70,6 +70,13 @@ const Project = ({
             }
           </div>
           <div className={`${MAX_WIDTH_50} ${section.className}`}>
+            {section.accessory &&
+              <Img
+                src={section.accessory.src}
+                alt="arrow indicator"
+                className={section.accessory.className}
+              />
+            }
             {section.iframe && <PhoneIframe src={section.iframe.src} />}
             {section.image &&
               <Img
