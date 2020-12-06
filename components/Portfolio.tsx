@@ -110,7 +110,7 @@ interface Section {
   className?: string
   action?: ActionProps
   iframe?: Iframe
-  accessory: Accessory
+  accessory?: Accessory
 }
 
 interface Technologies {
