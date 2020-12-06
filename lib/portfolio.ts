@@ -4,6 +4,8 @@ import {
   ABOUT_PROJECT,
   ABOUT_LANDING_PROJECT,
   LANDING_KNOWLEDGE,
+  LANDING_TECHNOLOGIES,
+  LANDING_TECHNOLOGIES_ACCESSORY,
 } from '../utils/constants';
 import getDeviceType from '../utils/getDeviceType';
 
@@ -17,7 +19,7 @@ const portfolio = {
       id: 'ui-library',
       title: 'UI library',
       description: 'It\'s a react components library built on storybook.',
-      image: '/images/ui-kit-thumbnail.png',
+      image: `/images/jampp-thumbnail-${device}.svg`,
       alt: 'ui kit image',
       technologies: {
         title: 'Technologies used:',
@@ -54,7 +56,7 @@ const portfolio = {
       id: 'data-privacy',
       title: 'Landing page',
       description: 'It\'s a data privacy landing page built on react, node.js, and server side rendering.',
-      image: '/images/home-landing-desktop.png',
+      image: `/images/hero-landing-mobile.png`,
       alt: 'landing-page',
       technologies: {
         title: 'Technologies used:',
@@ -82,7 +84,11 @@ const portfolio = {
           iframe: {
             src: 'https://www.mercadolibre.com.ar/privacidad',
           },
-          className: 'landing-technologies'
+          accessory: {
+            src: '/images/arrow-yellow.gif',
+            className: LANDING_TECHNOLOGIES_ACCESSORY,
+          },
+          className: LANDING_TECHNOLOGIES
         },
         {
           id: 'landing-knowledge',

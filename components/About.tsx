@@ -16,7 +16,7 @@ export interface AboutProps {
 
 const About = ({ title, description, className }: AboutProps): React.ReactElement => (
   <Section className={className}>
-    <Image src="/images/profile.jpg" alt={PROFILE_IMAGE} width="500" height="500" />
+    <Image src="/images/profile.jpg" alt={PROFILE_IMAGE} width="500" height="500" priority />
     <DescriptionContainer>
       <Header>
         {title}

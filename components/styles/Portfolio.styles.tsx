@@ -15,6 +15,14 @@ import { ActionLink } from './Action.styles';
 export const Container = styled.div``;
 
 export const PortfolioSection = styled(ResumeSection)`
+  @media (max-width: 767px) {
+    &.${SECOND_PORTFOLIO_SECTION} {
+      padding: 20px;
+      margin: 0;
+      margin-bottom: 58px;
+      background-color: white;
+    }
+  }
   @media (min-width: 768px) {
     flex-direction: row;
     align-items: flex-start;
@@ -89,8 +97,11 @@ export const DescriptionContainer = styled.div`
 `;
 
 export const TextContainer = styled.div`
+  display: flex;
+  @media (max-width: 767px) {
+    flex-direction: column-reverse;
+  }
   @media (min-width: 768px) {
-    display: flex;
     justify-content: space-between;
   }
 `;
@@ -106,27 +117,29 @@ export const ProjectDescription = styled.p`
 `;
 
 export const ProjectContainer = styled.div`
-  @media (min-width: 768px) {
-    .${CUSTOM_PROJECT_LINK} {
-      a {
-        font-weight: 900;
-        font-size: 22px;
-        margin: 16px 0;
-        padding: 0;
-        color: ${({ theme }) => theme.orange.o40};
-        &:hover {
-          color: ${({ theme }) => theme.orange.o50};
-        }
+  .${CUSTOM_PROJECT_LINK} {
+    a {
+      font-weight: 900;
+      font-size: 22px;
+      margin: 16px 0;
+      padding: 0;
+      color: ${({ theme }) => theme.orange.o40};
+      &:hover {
+        color: ${({ theme }) => theme.orange.o50};
       }
     }
   }
 `;
 
 export const ProjectImg = styled(Img)`
+  max-width: 100%;
+  @media (max-width: 767px) {
+    margin-bottom: 20px;
+  }
+  @media (min-width: 768px) {
+    max-height: 215px;
+  }
   &:hover {
     cursor: pointer;
-  }
-  @media (max-width: 767px) {
-    max-width: 100%;
   }
 `;
