@@ -19,7 +19,7 @@ const portfolio = {
       id: 'ui-library',
       title: 'UI library',
       description: 'It\'s a react components library built on storybook.',
-      image: `/images/jampp-thumbnail-${device}.svg`,
+      image: `/images/hero-jampp-thumbnail.svg`,
       alt: 'ui kit image',
       technologies: {
         title: 'Technologies used:',
@@ -56,7 +56,7 @@ const portfolio = {
       id: 'data-privacy',
       title: 'Landing page',
       description: 'It\'s a data privacy landing page built on react, node.js, and server side rendering.',
-      image: `/images/hero-landing-mobile.png`,
+      image: `/images/hero-landing-thumbnail.png`,
       alt: 'landing-page',
       technologies: {
         title: 'Technologies used:',
