@@ -26,6 +26,14 @@ export const ActionContainer = styled.div`
     }
   }
   &.arrow-button {
+    a {
+      display: flex;
+      align-items: center;
+      border-radius: 3px;
+      background-color: ${({ theme }) => theme.white.w08};
+      font-size: 1rem;
+      padding: 10px;
+    }
     margin: 50px auto 50px 0;
     svg {
       height: 18px;

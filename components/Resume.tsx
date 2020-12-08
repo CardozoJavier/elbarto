@@ -1,7 +1,6 @@
 import parse from 'html-react-parser';
 import Action from './Action';
 import {
-  BUTTON,
   MARGIN_20,
   ARROW_ICON,
   CUSTOM_TITLE,
@@ -11,6 +10,7 @@ import {
   DOWNLOAD_RESUME,
   CUSTOM_SUBTITLE,
   SECOND_RESUME_SECTION,
+  LINK,
 } from '../utils/constants';
 import {
   Li,
@@ -97,10 +97,12 @@ const Resume = ({
       <Section className={className}>
         <Header>{title}</Header>
         <Action
+          href='/images/Frontend developer - Javier Cardozo.pdf'
+          download={true}
+          passHref={true}
           text={DOWNLOAD_RESUME}
           icon={ARROW_ICON}
-          type={BUTTON}
-          onClick={handleDownloadClick}
+          type={LINK}
           className={ARROW_BUTTON}
         />
       </Section>
