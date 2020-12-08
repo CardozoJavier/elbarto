@@ -19,9 +19,10 @@ type Props = {
   className?: string;
   onClick?: () => void;
   passHref?: boolean;
+  download?: boolean;
 };
 
-const getIcon = (icon) => {
+const getIcon = (icon: string) => {
   switch (icon) {
     case ARROW_ICON:
       return <ArrowIcon />;
@@ -30,9 +31,9 @@ const getIcon = (icon) => {
   }
 };
 
-const renderLink = (text: string, href: string, icon: string, passHref: boolean): React.ReactElement => (
+const renderLink = (text: string, href: string, icon?: string, passHref?: boolean, download?: boolean): React.ReactElement => (
   <Link href={href} passHref={passHref}>
-    <ActionLink target={passHref ? '_blank' : ''}>
+    <ActionLink target={passHref ? '_blank' : ''} download={download}>
       {text}
       {icon && getIcon(icon)}
     </ActionLink>
@@ -46,10 +47,10 @@ const renderButton = (text: string, icon: string, onClick: () => void) => (
   </Button>
 );
 
-const renderAction = ({ type, text, href, icon, onClick, passHref }: Props): React.ReactElement => {
+const renderAction = ({ type, text, href, icon, onClick, passHref, download }: Props): React.ReactElement => {
   switch (type) {
     case LINK:
-      return renderLink(text, href, icon, passHref);
+      return renderLink(text, href, icon, passHref, download);
     case BUTTON:
       return renderButton(text, icon, onClick);
     default:
@@ -57,9 +58,9 @@ const renderAction = ({ type, text, href, icon, onClick, passHref }: Props): Rea
   }
 };
 
-const Action = ({ type, text, href, className, icon, onClick, passHref }: Props): React.ReactElement => (
+const Action = ({ type, text, href, className, icon, onClick, passHref, download }: Props): React.ReactElement => (
   <ActionContainer className={className}>
-    {renderAction({ type, text, href, icon, onClick, passHref })}
+    {renderAction({ type, text, href, icon, onClick, passHref, download })}
   </ActionContainer>
 );
 
