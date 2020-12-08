@@ -52,6 +52,10 @@ export const ProjectSection = styled(ResumeSection)`
       &:last-of-type {
         padding-bottom: 20vh;
       }
+      &.${LANDING_TECHNOLOGIES} {
+        align-items: center;
+        padding-top: 0;
+      }
     }
   }
   @media (max-width: 1199px) {
